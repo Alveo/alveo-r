@@ -1,0 +1,18 @@
+Package: hcsvlab
+Type: Package
+Title: R interface to the HCS vLab API
+Version: 1.0
+Date: 2013-12-16
+Author: Matt Hillman
+Maintainer: Matt <matthew@intersect.org.au>
+Description: Provides an interface to interact with the API of the HCS vLab, see hcsvlab.org.au
+License: none
+Depends:
+    RCurl,
+    rjson
+Collate:
+	'api.R'
+    'client.R'
+    'document.R'
+    'item.R'
+    'item_list.R'
