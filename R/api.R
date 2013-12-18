@@ -41,9 +41,11 @@
 
 	if(!is.null(data)) {
 		headers = c(headers, 'Content-Type' = 'application/json')
+		req <- postForm(url, .opts=list(postfields=data, httpheader=headers), style="POST")
 	}
-
-	req <- getURL(url, httpheader=headers)
+	else {
+		req <- getURL(url, httpheader=headers)
+	}
 
 	return(req)
 }

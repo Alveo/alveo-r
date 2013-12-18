@@ -12,7 +12,7 @@ Document <- setRefClass("Document",
 		},
 
 		download = function(destination) {
-			content <- get_content(uri)
+			content <- get_content()
 
 			if(!file.exists(destination)) {
 				dir.create(destination)

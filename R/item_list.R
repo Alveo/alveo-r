@@ -28,6 +28,10 @@ ItemList <- setRefClass("ItemList",
 			#TODO: download item list as zip
 		},
 
+		num_items = function() {
+			return(length(items))
+		},
+
 		show = function() {
 			cat("Name: \n")
 			methods::show(name)

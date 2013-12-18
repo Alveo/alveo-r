@@ -37,12 +37,22 @@ RestClient <- setRefClass("RestClient",
 			return(fromJSON(res))
 		},
 
-		download_items = function(items, destination) {
-			# TODO: download requested items in zip format
+		download_items = function(items, destination, name, format="zip") {
+			# TODO: handle zip/warc formats once warc is complete
+
+			zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=toJSON(list(items=items)))
+
+			if(!file.exists(destination)) {
+				dir.create(destination)
+			}
+
+			writeBin(as.vector(zip), file.path(destination, paste(name, ".zip", sep="")))
 		},
 
 		create_item_list = function(items, name) {
 			# TODO: create item list with given items
+
+			
 		},
 
 		show = function() {
