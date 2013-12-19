@@ -6,7 +6,7 @@ Date: 2013-12-16
 Author: Matt Hillman
 Maintainer: Matt <matthew@intersect.org.au>
 Description: Provides an interface to interact with the API of the HCS vLab, see hcsvlab.org.au
-License: none
+License: GNU GPL 3
 Depends:
     RCurl,
     rjson

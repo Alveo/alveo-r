@@ -12,7 +12,7 @@ Item <- setRefClass("Item",
 			return(fromJSON(res))
 		},
 
-		get_primary_text = function() {
+		get_indexable_text = function() {
 			metadata <- get_metadata()
 			if(!is.null(metadata$primary_text_url) && metadata$primary_text_url != "No primary text found") {
 				res <- api_request(metadata$primary_text_url)
