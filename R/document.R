@@ -1,7 +1,9 @@
 Document <- setRefClass("Document",
 
 	fields = list(
-		uri = "character"
+		uri = "character",
+		type = "character",
+		size = "character"
 	),
 
 	methods = list(
@@ -31,6 +33,10 @@ Document <- setRefClass("Document",
 		show = function() {
 			cat("URI: \n")
 			methods::show(uri)
+			cat("Type: \n")
+			methods::show(type)
+			cat("Size: \n")
+			methods::show(size)
 		}
 	)
 )

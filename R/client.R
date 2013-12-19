@@ -26,6 +26,12 @@ RestClient <- setRefClass("RestClient",
 			return(ItemList(name=res$name, uri=uri, items=res$items))
 		},
 
+		get_item_list_by_id = function(id) {
+			uri <- paste(server_uri, "/item_lists/", id, sep="")
+			res <- fromJSON(api_request(uri))
+			return(ItemList(name=res$name, uri=uri, items=res$items))
+		},
+
 		get_item = function(uri) {
 			res <- fromJSON(api_request(uri))
 			return(Item(id=res$metadata$handle, uri=uri))

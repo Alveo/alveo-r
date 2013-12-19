@@ -9,11 +9,16 @@ Item <- setRefClass("Item",
 
 		get_metadata = function() {
 			res <- api_request(uri)
+			return(fromJSON(res)$metadata)
+		},
+
+		get_all_metadata = function() {
+			res <- api_request(uri)
 			return(fromJSON(res))
 		},
 
 		get_indexable_text = function() {
-			metadata <- get_metadata()
+			metadata <- get_all_metadata()
 			if(!is.null(metadata$primary_text_url) && metadata$primary_text_url != "No primary text found") {
 				res <- api_request(metadata$primary_text_url)
 				return(res)
@@ -24,14 +29,14 @@ Item <- setRefClass("Item",
 		},
 
 		get_documents = function() {
-			metadata <- get_metadata()
+			metadata <- get_all_metadata()
 			return(metadata$documents)
 		},
 
 		get_document = function(index) {
-			metadata <- get_metadata()
+			metadata <- get_all_metadata()
 			doc <- metadata$documents[[index]]
-			return(Document(uri=doc$url))
+			return(Document(uri=doc$url, type=doc$`dc:type`, size=doc$size))
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {
