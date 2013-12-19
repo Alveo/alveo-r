@@ -33,7 +33,7 @@ RestClient <- setRefClass("RestClient",
 
 		search_metadata = function(query) {
 			query <- URLencode(query)
-			res <- api_request(paste(server_uri, "/catalog/search?", query, sep=""))
+			res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
 			return(fromJSON(res))
 		},
 
@@ -46,13 +46,14 @@ RestClient <- setRefClass("RestClient",
 				dir.create(destination)
 			}
 
-			writeBin(as.vector(zip), file.path(destination, paste(name, ".zip", sep="")))
+			filename <- file.path(destination, paste(name, ".zip", sep=""))
+			writeBin(as.vector(zip), filename)
+			return(filename)
 		},
 
 		create_item_list = function(items, name) {
-			# TODO: create item list with given items
-
-			
+			res <- api_request(paste(server_uri, "/item_lists?name=", name, sep=""), data=toJSON(list(items=items)))
+			return(fromJSON(res))
 		},
 
 		show = function() {

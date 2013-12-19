@@ -24,8 +24,19 @@ ItemList <- setRefClass("ItemList",
 			return(item_docs)
 		},
 
-		download = function(destination) {
-			#TODO: download item list as zip
+		download = function(destination, format="zip") {
+			#TODO: handle zip/warc formats once warc is done
+			header <- get_header_contents()
+
+			res <- getBinaryURL(paste(uri, "?format=", format, sep=""), httpheader=header)
+
+			if(!file.exists(destination)) {
+				dir.create(destination)
+			}
+
+			filename <- file.path(destination, paste(name, ".zip", sep=""))
+			writeBin(as.vector(res), filename)
+			return(filename)
 		},
 
 		num_items = function() {

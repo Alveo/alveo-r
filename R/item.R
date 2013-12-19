@@ -30,12 +30,24 @@ Item <- setRefClass("Item",
 
 		get_document = function(index) {
 			metadata <- get_metadata()
-			doc <- metadata$documents[index]
+			doc <- metadata$documents[[index]]
 			return(Document(uri=doc$url))
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {
-			# TODO: get annotations
+			annotations_url <- "/annotations"
+			if(!is.null(type) && !is.null(label)) {
+				annotations_url <- paste(annotations_url, "?type=", type, "&label=", label, sep="")
+			}
+			else if(!is.null(type) && is.null(label)) {
+				annotations_url <- paste(annotations_url, "?type=", type, sep="")
+			}
+			else if(is.null(type) && !is.null(label)) {
+				annotations_url <- paste(annotations_url, "?label=", label, sep="")
+			}
+
+			res <- api_request(paste(uri, annotations_url, sep=""))
+			return(fromJSON(res))
 		},
 
 		show = function() {

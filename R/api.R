@@ -36,16 +36,20 @@
 ##' @title api_request
 ##' @return API response as json
 'api_request' <- function(url, data = NULL) {
-	key <- api_key()
-	headers <- list('X-API-KEY' = key, 'Accept' = 'application/json')
+	header <- get_header_contents()
 
 	if(!is.null(data)) {
-		headers = c(headers, 'Content-Type' = 'application/json')
-		req <- postForm(url, .opts=list(postfields=data, httpheader=headers), style="POST")
+		header <- c(header, 'Content-Type' = 'application/json')
+		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST")
 	}
 	else {
-		req <- getURL(url, httpheader=headers)
+		req <- getURL(url, httpheader=header)
 	}
 
 	return(req)
+}
+
+'get_header_contents' <- function() {
+	key <- api_key()
+	return(list('X-API-KEY' = key, 'Accept' = 'application/json'))
 }

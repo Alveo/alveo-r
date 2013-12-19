@@ -7,7 +7,9 @@ Document <- setRefClass("Document",
 	methods = list(
 
 		get_content = function() {
-			res <- api_request(uri)
+			header <- get_header_contents()
+
+			res <- getURLContent(uri, httpheader=header)
 			return(res)
 		},
 
@@ -21,7 +23,7 @@ Document <- setRefClass("Document",
 			basename <- basename(uri)
 			filename <- file.path(destination, basename)
 
-			write(content, file=filename)
+			writeBin(as.vector(content), filename)
 
 			return(filename)
 		},
