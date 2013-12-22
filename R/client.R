@@ -58,7 +58,7 @@ RestClient <- setRefClass("RestClient",
 		},
 
 		create_item_list = function(items, name) {
-			res <- api_request(paste(server_uri, "/item_lists?name=", name, sep=""), data=toJSON(list(items=items)))
+			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name), sep=""), data=toJSON(list(items=items)))
 			return(fromJSON(res))
 		},
 

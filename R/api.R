@@ -6,7 +6,7 @@
 	}
 
 	if(file.exists(config_file)) {
-		config <- fromJSON(file = config_file)
+		config <- fromJSON(file=config_file)
 	}
 	else {
 		stop(cat("Config file ", config_file, " not found"))
@@ -49,6 +49,7 @@
 	return(req)
 }
 
+##' Sets default headers for HCS vLab API calls
 'get_header_contents' <- function() {
 	key <- api_key()
 	return(list('X-API-KEY' = key, 'Accept' = 'application/json'))

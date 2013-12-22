@@ -9,6 +9,9 @@ ItemList <- setRefClass("ItemList",
 	methods = list(
 
 		get_item = function(index) {
+			if(index > length(items) || index < 1) {
+				stop('index out of bounds')
+			}
 			res <- fromJSON(api_request(items[index]))
 			return(Item(id=res$metadata$handle, uri=items[index]))
 		},

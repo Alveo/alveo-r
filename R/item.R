@@ -35,8 +35,11 @@ Item <- setRefClass("Item",
 
 		get_document = function(index) {
 			metadata <- get_all_metadata()
+			if(index > length(metadata$documents) || index < 1) {
+				stop('index out of bounds')
+			}
 			doc <- metadata$documents[[index]]
-			return(Document(uri=doc$url, type=doc$`dc:type`, size=doc$size))
+			return(Document(uri=doc$url, type=as.character(doc$`dc:type`), size=as.character(doc$size)))
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {
