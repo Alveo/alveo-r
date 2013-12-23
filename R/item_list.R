@@ -28,9 +28,12 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		download = function(destination, format="zip") {
-			#TODO: handle zip/warc formats once warc is done
-			header <- get_header_contents()
+			# R in Windows strangely can't handle directory paths with trailing slashes
+			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+				destination <- substr(destination, 1, nchar(destination)-1)
+			}
 
+			header <- get_header_contents()
 			res <- getBinaryURL(paste(uri, "?format=", format, sep=""), httpheader=header)
 
 			if(!file.exists(destination)) {

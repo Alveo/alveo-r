@@ -16,6 +16,11 @@ Document <- setRefClass("Document",
 		},
 
 		download = function(destination) {
+			# R in Windows strangely can't handle directory paths with trailing slashes
+			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+				destination <- substr(destination, 1, nchar(destination)-1)
+			}
+			
 			content <- get_content()
 
 			if(!file.exists(destination)) {

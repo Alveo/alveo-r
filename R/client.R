@@ -44,7 +44,10 @@ RestClient <- setRefClass("RestClient",
 		},
 
 		download_items = function(items, destination, name, format="zip") {
-			# TODO: handle zip/warc formats once warc is complete
+			# R in Windows strangely can't handle directory paths with trailing slashes
+			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+				destination <- substr(destination, 1, nchar(destination)-1)
+			}
 
 			zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=toJSON(list(items=items)))
 
