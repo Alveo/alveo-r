@@ -38,7 +38,7 @@ RestClient <- setRefClass("RestClient",
 		},
 
 		search_metadata = function(query) {
-			query <- URLencode(query)
+			query <- URLencode(query, reserved=TRUE)
 			res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
 			return(fromJSON(res))
 		},
@@ -61,7 +61,7 @@ RestClient <- setRefClass("RestClient",
 		},
 
 		create_item_list = function(items, name) {
-			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name), sep=""), data=toJSON(list(items=items)))
+			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=toJSON(list(items=items)))
 			return(fromJSON(res))
 		},
 
