@@ -5,6 +5,11 @@ This is the main repository for the R library to interact with the HCS vLab API
 
 Documentation for this library can be found [here](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RLibrary.md)
 
+Binary installation files are provided for various platforms:
+
+| Package | Mac | Linux (Centos) | Windows |
+| ------  | --- | -------------- | ------- |
+| hcsvlab | [hcsvlab_1.0.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0.tgz) | [hcsvlab_1.0_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0_R_x86_64-redhat-linux-gnu.tar.gz) | [hcsvlab_1.0.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0.zip) |
 
 
 Example Usage:
