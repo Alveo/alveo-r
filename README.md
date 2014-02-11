@@ -46,7 +46,7 @@ Download the appropriate binary from the list below to your machine.
 | Package | Mac | Linux (Centos) | Windows |
 | ------  | --- | -------------- | ------- |
 | wrassp | [wrassp_0.0.3.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/wrassp_0.0.3.tgz) | [wrassp_0.0.3_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/wrassp_0.0.3_R_x86_64-redhat-linux-gnu.tar.gz) | [wrassp_0.0.3.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/wrassp_0.0.3.zip) |
-| emuSX | [emuSX_0.0.7_mac.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.7_mac.tgz) | [emuSX_0.0.7_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.7_R_x86_64-redhat-linux-gnu.tar.gz) | [emuSX_0.0.7.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.7.zip) |
+| emuSX | [emuSX_0.0.8.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.8.tgz) | [emuSX_0.0.8_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.8_R_x86_64-redhat-linux-gnu.tar.gz) | [emuSX_0.0.8.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/emuSX_0.0.8.zip) |
 
 Then inside R run the following commands:
 
