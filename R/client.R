@@ -21,6 +21,9 @@ RestClient <- setRefClass("RestClient",
 			return(fromJSON(res))
 		},
 
+		##' Return the item list with the given uri. The URI is derived from a call to get_item_lists and has the form /item_lists/{id}
+		##' @title get_item_list
+		##' @return item list as json
 		get_item_list = function(uri) {
 			res <- fromJSON(api_request(uri))
 			return(ItemList(name=res$name, uri=uri, items=res$items))

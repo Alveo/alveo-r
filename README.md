@@ -25,6 +25,7 @@ Example Usage:
 	item_list$download("/home/user/R")
 	item_list$get_items()
 	item_list$get_item_documents()
+	item_list$get_segment_list()
 
 	item <- item_list$get_item(1)
 	item$get_metadata()

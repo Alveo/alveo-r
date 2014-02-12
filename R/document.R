@@ -8,6 +8,9 @@ Document <- setRefClass("Document",
 
 	methods = list(
 
+		##' Get the document at the given URL
+		##' @title get_document
+		##' @return document, which may be binary data
 		get_content = function() {
 			header <- get_header_contents()
 
@@ -15,6 +18,9 @@ Document <- setRefClass("Document",
 			return(res)
 		},
 
+		##' Download the document and store it in the directory 'destination'. Create the directory if it doesn't exist
+		##' @title download_document
+		##' @return local name of the downloaded file
 		download = function(destination) {
 			# R in Windows strangely can't handle directory paths with trailing slashes
 			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {

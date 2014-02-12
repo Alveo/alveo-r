@@ -7,6 +7,9 @@ Item <- setRefClass("Item",
 
 	methods = list(
 
+		##' Return the item with the given url. The URL is derived from an item list and has the form /catalog/{id}
+		##' @title get_item_metadata
+		##' @return item list metadata as json
 		get_metadata = function() {
 			res <- api_request(uri)
 			return(fromJSON(res)$metadata)
@@ -17,6 +20,9 @@ Item <- setRefClass("Item",
 			return(fromJSON(res))
 		},
 
+		##' Return the indexable text for an item if any as a string. The URL is an item URL of the form /catalog/{id}
+		##' @title get_item_primary_text
+		##' @return item primary text if exists
 		get_indexable_text = function() {
 			metadata <- get_all_metadata()
 			if(!is.null(metadata$primary_text_url) && metadata$primary_text_url != "No primary text found") {

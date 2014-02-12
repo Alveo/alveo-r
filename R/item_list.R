@@ -45,6 +45,37 @@ ItemList <- setRefClass("ItemList",
 			return(filename)
 		},
 
+		get_segment_list = function(type="", label="") {
+			if(num_items() == 0) {
+				stop("Item list cannot be empty")
+			}
+			segment_list=make.seglist(c(), c(), c(), c(), 'query', 'segment', 'hcsvlab')
+
+			for(i in 1:num_items()) {
+				item <- fromJSON(api_request(paste(items[i], ".json", sep="")))
+				if(!is.null(item$error) && item$error == "Invalid authentication token.") {
+					stop("Invalid authentication token. Ensure the correct authentication key is in your hcsvlab.config file")
+				}
+				else if(is.null(item$annotations_url)) {
+					next #skip if item has no annotations
+				}
+				segments <- fromJSON(api_request(paste(item$annotations_url, '?type=', type, '&label=', label, sep='')))
+
+				if(is.null(segments$error) && length(segments$annotations) != 0) {
+					labels <- c(); starts = c(); ends = c(); utts = c()
+					for(i in 1:length(segments$annotations)) {
+						labels <- c(labels, segments$annotations[[i]]$label)
+						starts <- c(starts, as.numeric(segments$annotations[[i]]$start) * 1000)
+						ends <- c(ends, as.numeric(segments$annotations[[i]]$end) * 1000)
+						utts <- c(utts, segments$commonProperties$annotates)
+					}
+
+					segment_list <- rbind(segment_list, make.seglist(labels, starts, ends, utts, 'query', 'segment', 'hcsvlab'))
+				}
+			}
+			segment_list
+		},
+
 		num_items = function() {
 			return(length(items))
 		},
