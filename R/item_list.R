@@ -13,7 +13,7 @@ ItemList <- setRefClass("ItemList",
 				stop('index out of bounds')
 			}
 			res <- fromJSON(api_request(items[index]))
-			return(Item(id=res$metadata$handle, uri=items[index]))
+			return(Item(id=res$`hcsvlab:metadata`$`hcsvlab:handle`, uri=items[index]))
 		},
 
 		get_item_documents = function() {
@@ -21,7 +21,7 @@ ItemList <- setRefClass("ItemList",
 			for(i in 1:length(items)) {
 				docs <- get_item(i)$get_documents()
 				for(j in 1:length(docs)) {
-					item_docs <- c(item_docs, docs[[j]]$url)
+					item_docs <- c(item_docs, docs[[j]]$`hcsvlab:url`)
 				}
 			}
 			return(item_docs)
@@ -56,18 +56,18 @@ ItemList <- setRefClass("ItemList",
 				if(!is.null(item$error) && item$error == "Invalid authentication token.") {
 					stop("Invalid authentication token. Ensure the correct authentication key is in your hcsvlab.config file")
 				}
-				else if(is.null(item$annotations_url)) {
+				else if(is.null(item$`hcsvlab:annotations_url`)) {
 					next #skip if item has no annotations
 				}
-				segments <- fromJSON(api_request(paste(item$annotations_url, '?type=', type, '&label=', label, sep='')))
+				segments <- fromJSON(api_request(paste(item$`hcsvlab:annotations_url`, '?type=', type, '&label=', label, sep='')))
 
-				if(is.null(segments$error) && length(segments$annotations) != 0) {
+				if(is.null(segments$error) && length(segments$`hcsvlab:annotations`) != 0) {
 					labels <- c(); starts = c(); ends = c(); utts = c()
-					for(i in 1:length(segments$annotations)) {
-						labels <- c(labels, segments$annotations[[i]]$label)
-						starts <- c(starts, as.numeric(segments$annotations[[i]]$start) * 1000)
-						ends <- c(ends, as.numeric(segments$annotations[[i]]$end) * 1000)
-						utts <- c(utts, segments$commonProperties$annotates)
+					for(i in 1:length(segments$`hcsvlab:annotations`)) {
+						labels <- c(labels, segments$`hcsvlab:annotations`[[i]]$label)
+						starts <- c(starts, as.numeric(segments$`hcsvlab:annotations`[[i]]$start) * 1000)
+						ends <- c(ends, as.numeric(segments$`hcsvlab:annotations`[[i]]$end) * 1000)
+						utts <- c(utts, segments$commonProperties$`hcsvlab:annotates`)
 					}
 
 					segment_list <- rbind(segment_list, make.seglist(labels, starts, ends, utts, 'query', 'segment', 'hcsvlab'))

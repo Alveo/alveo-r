@@ -37,7 +37,7 @@ RestClient <- setRefClass("RestClient",
 
 		get_item = function(uri) {
 			res <- fromJSON(api_request(uri))
-			return(Item(id=res$metadata$handle, uri=uri))
+			return(Item(id=res$`hcsvlab:metadata`$`hcsvlab:handle`, uri=uri))
 		},
 
 		search_metadata = function(query) {
