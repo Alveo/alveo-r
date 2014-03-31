@@ -12,7 +12,7 @@ Item <- setRefClass("Item",
 		##' @return item list metadata as json
 		get_metadata = function() {
 			res <- api_request(uri)
-			return(fromJSON(res)$`hcsvlab:metadata`)
+			return(fromJSON(res)$`alveo:metadata`)
 		},
 
 		get_all_metadata = function() {
@@ -25,8 +25,8 @@ Item <- setRefClass("Item",
 		##' @return item primary text if exists
 		get_indexable_text = function() {
 			metadata <- get_all_metadata()
-			if(!is.null(metadata$`hcsvlab:primary_text_url`) && metadata$`hcsvlab:primary_text_url` != "No primary text found") {
-				res <- api_request(metadata$`hcsvlab:primary_text_url`)
+			if(!is.null(metadata$`alveo:primary_text_url`) && metadata$`alveo:primary_text_url` != "No primary text found") {
+				res <- api_request(metadata$`alveo:primary_text_url`)
 				return(res)
 			}
 			else {
@@ -36,16 +36,16 @@ Item <- setRefClass("Item",
 
 		get_documents = function() {
 			metadata <- get_all_metadata()
-			return(metadata$`hcsvlab:documents`)
+			return(metadata$`alveo:documents`)
 		},
 
 		get_document = function(index) {
 			metadata <- get_all_metadata()
-			if(index > length(metadata$`hcsvlab:documents`) || index < 1) {
+			if(index > length(metadata$`alveo:documents`) || index < 1) {
 				stop('index out of bounds')
 			}
-			doc <- metadata$`hcsvlab:documents`[[index]]
-			return(Document(uri=doc$`hcsvlab:url`, type=as.character(doc$`dc:type`), size=as.character(doc$`hcsvlab:size`)))
+			doc <- metadata$`alveo:documents`[[index]]
+			return(Document(uri=doc$`alveo:url`, type=as.character(doc$`dc:type`), size=as.character(doc$`alveo:size`)))
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {

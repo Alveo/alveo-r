@@ -18,7 +18,7 @@ segment information for each item (if annotation set exists
 for item) in order to produce a segment list.
 }
 \examples{
-#   item_list = client$get_item_list('http://hcsvlab.intersect.org.au/item_lists/10.json')
+#   item_list = client$get_item_list('http://alveo.intersect.org.au/item_lists/10.json')
 #   segment_list = item_list$get_segment_list()
 }
 \author{

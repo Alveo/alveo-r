@@ -1,11 +1,11 @@
-Package: hcsvlab
+Package: alveo
 Type: Package
-Title: R interface to the HCS vLab API
+Title: R interface to the Alveo API
 Version: 1.0.1
 Date: 2013-12-16
 Author: Matt Hillman
 Maintainer: Matt <matthew@intersect.org.au>
-Description: Provides an interface to interact with the API of the HCS vLab, see hcsvlab.org.au
+Description: Provides an interface to interact with the API of the Alveo, see alveo.org.au
 License: GNU GPL 3
 Depends:
     RCurl,

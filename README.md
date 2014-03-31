@@ -1,7 +1,7 @@
-HCSvLab R Library
+Alveo R Library
 =======
 
-This is the main repository for the R library to interact with the HCS vLab API
+This is the main repository for the R library to interact with the Alveo API
 
 Documentation for this library can be found [here](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RLibrary.md)
 
@@ -9,13 +9,13 @@ Binary installation files are provided for various platforms:
 
 | Package | Mac | Linux (Centos) | Windows |
 | ------  | --- | -------------- | ------- |
-| hcsvlab | [hcsvlab_1.0.1.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0.1.tgz) | [hcsvlab_1.0.1_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0.1_R_x86_64-redhat-linux-gnu.tar.gz) | [hcsvlab_1.0.1.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/hcsvlab_1.0.1.zip) |
+| alveo   | [alveo_1.0.1.tgz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/alveo_1.0.1.tgz) | [alveo_1.0.1_R_x86_64-redhat-linux-gnu.tar.gz](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/alveo_1.0.1_R_x86_64-redhat-linux-gnu.tar.gz) | [alveo_1.0.1.zip](https://github.com/IntersectAustralia/hcsvlab-docs/blob/master/RPackages/alveo_1.0.1.zip) |
 
 Older versions of the binaries can be found in dated directories at [this page](https://github.com/IntersectAustralia/hcsvlab-docs/tree/master/RPackages)
 
 Example Usage:
 
-	client <- RestClient(server_uri="app.hcsvlab.org.au")
+	client <- RestClient(server_uri="app.alveo.org.au")
 	client$get_api_version()
 
 	results <- client$search_metadata("music")
@@ -40,7 +40,7 @@ Example Usage:
 
 ### Related Packages ###
 
-We also have two other packages which can be used with data from the HCS vLab. These are the wrassp and emuSX libraries. 
+We also have two other packages which can be used with data from Alveo. These are the wrassp and emuSX libraries. 
 ### Installation
 
 Download the appropriate binary from the list below to your machine.

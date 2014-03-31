@@ -1,8 +1,8 @@
-##' Read the user configuration file by default ~/hcsvlab.config and return a hash of keys and values
+##' Read the user configuration file by default ~/alveo.config and return a hash of keys and values
 ##' @title read_config
 'read_config' <- function(config_file = NULL) {
 	if(is.null(config_file)) {
-		config_file <- file.path(Sys.getenv("HOME"), "hcsvlab.config")
+		config_file <- file.path(Sys.getenv("HOME"), "alveo.config")
 	}
 
 	if(file.exists(config_file)) {
