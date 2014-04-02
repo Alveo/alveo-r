@@ -68,6 +68,18 @@ RestClient <- setRefClass("RestClient",
 			return(fromJSON(res))
 		},
 
+		initialize = function(server_uri) {
+			if(grepl("http://", server_uri)) {
+				server_uri <<- sub("http://", "https://", server_uri)
+			}
+			else if(!grepl("https://", server_uri)) {
+				server_uri <<- paste("https://", server_uri, sep="")
+			}
+			else {
+				server_uri <<- server_uri
+			}
+		},
+
 		show = function() {
 			cat("Server URI: \n")
 			methods::show(server_uri)

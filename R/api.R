@@ -40,10 +40,10 @@
 
 	if(!is.null(data)) {
 		header <- c(header, 'Content-Type' = 'application/json')
-		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST")
+		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST", .opts = list(ssl.verifypeer = FALSE))
 	}
 	else {
-		req <- getURL(url, httpheader=header)
+		req <- getURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))
 	}
 
 	return(req)
