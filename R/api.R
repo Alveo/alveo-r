@@ -6,7 +6,8 @@
 	}
 
 	if(file.exists(config_file)) {
-		config <- fromJSON(file=config_file)
+		configtxt <- readLines(config_file)
+		config <- fromJSON(configtxt)
 	}
 	else {
 		stop(cat("Config file ", config_file, " not found"))
