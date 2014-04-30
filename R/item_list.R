@@ -34,7 +34,7 @@ ItemList <- setRefClass("ItemList",
 			}
 
 			header <- get_header_contents()
-			res <- getBinaryURL(paste(uri, "?format=", format, sep=""), httpheader=header)
+			res <- getBinaryURL(paste(uri, "?format=", format, sep=""), httpheader=header, .opts = list(ssl.verifypeer = FALSE))
 
 			if(!file.exists(destination)) {
 				dir.create(destination)
