@@ -1,3 +1,5 @@
+require(rjson)
+
 ##' Read the user configuration file by default ~/alveo.config and return a hash of keys and values
 ##' @title read_config
 'read_config' <- function(config_file = NULL) {
@@ -7,7 +9,7 @@
 
 	if(file.exists(config_file)) {
 		configtxt <- readLines(config_file)
-		config <- fromJSON(configtxt)
+		config <- rjson::fromJSON(configtxt)
 	}
 	else {
 		stop(cat("Config file ", config_file, " not found"))

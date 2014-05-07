@@ -12,7 +12,7 @@ ItemList <- setRefClass("ItemList",
 			if(index > length(items) || index < 1) {
 				stop('index out of bounds')
 			}
-			res <- fromJSON(api_request(items[index]))
+			res <- rjson::fromJSON(api_request(items[index]))
 			return(Item(id=res$`alveo:metadata`$`alveo:handle`, uri=items[index]))
 		},
 
@@ -52,14 +52,14 @@ ItemList <- setRefClass("ItemList",
 			segment_list=make.seglist(c(), c(), c(), c(), 'query', 'segment', 'alveo')
 
 			for(i in 1:num_items()) {
-				item <- fromJSON(api_request(paste(items[i], ".json", sep="")))
+				item <- rjson::fromJSON(api_request(paste(items[i], ".json", sep="")))
 				if(!is.null(item$error) && item$error == "Invalid authentication token.") {
 					stop("Invalid authentication token. Ensure the correct authentication key is in your alveo.config file")
 				}
 				else if(is.null(item$`alveo:annotations_url`)) {
 					next #skip if item has no annotations
 				}
-				segments <- fromJSON(api_request(paste(item$`alveo:annotations_url`, '?type=', type, '&label=', label, sep='')))
+				segments <- rjson::fromJSON(api_request(paste(item$`alveo:annotations_url`, '?type=', type, '&label=', label, sep='')))
 
 				if(is.null(segments$error) && length(segments$`alveo:annotations`) != 0) {
 					labels <- c(); starts = c(); ends = c(); utts = c()

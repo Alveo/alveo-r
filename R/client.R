@@ -1,3 +1,5 @@
+require(rjson)
+
 RestClient <- setRefClass("RestClient",
 
 	fields = list(
@@ -7,43 +9,43 @@ RestClient <- setRefClass("RestClient",
 	methods = list(
 
 		get_api_version = function() {
-			res <- fromJSON(api_request(paste(server_uri, "/version", sep="")))
+			res <- rjson::fromJSON(api_request(paste(server_uri, "/version", sep="")))
 			return(res$`API version`)
 		},
 
 		get_annotation_context = function() {
 			res <- api_request(paste(server_uri, "/schema/json-ld", sep=""))
-			return(fromJSON(res))
+			return(rjson::fromJSON(res))
 		},
 
 		get_item_lists = function() {
 			res <- api_request(paste(server_uri, "/item_lists", sep=""))
-			return(fromJSON(res))
+			return(rjson::fromJSON(res))
 		},
 
 		##' Return the item list with the given uri. The URI is derived from a call to get_item_lists and has the form /item_lists/{id}
 		##' @title get_item_list
 		##' @return item list as json
 		get_item_list = function(uri) {
-			res <- fromJSON(api_request(uri))
+			res <- rjson::fromJSON(api_request(uri))
 			return(ItemList(name=res$name, uri=uri, items=res$items))
 		},
 
 		get_item_list_by_id = function(id) {
 			uri <- paste(server_uri, "/item_lists/", id, sep="")
-			res <- fromJSON(api_request(uri))
+			res <- rjson::fromJSON(api_request(uri))
 			return(ItemList(name=res$name, uri=uri, items=res$items))
 		},
 
 		get_item = function(uri) {
-			res <- fromJSON(api_request(uri))
+			res <- rjson::fromJSON(api_request(uri))
 			return(Item(id=res$`alveo:metadata`$`alveo:handle`, uri=uri))
 		},
 
 		search_metadata = function(query) {
 			query <- URLencode(query, reserved=TRUE)
 			res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
-			return(fromJSON(res))
+			return(rjson::fromJSON(res))
 		},
 
 		download_items = function(items, destination, name, format="zip") {
@@ -52,7 +54,7 @@ RestClient <- setRefClass("RestClient",
 				destination <- substr(destination, 1, nchar(destination)-1)
 			}
 
-			zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=toJSON(list(items=items)))
+			zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=rjson::toJSON(list(items=items)))
 
 			if(!file.exists(destination)) {
 				dir.create(destination)
@@ -64,8 +66,8 @@ RestClient <- setRefClass("RestClient",
 		},
 
 		create_item_list = function(items, name) {
-			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=toJSON(list(items=items)))
-			return(fromJSON(res))
+			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rsjon::toJSON(list(items=items)))
+			return(rjson::fromJSON(res))
 		},
 
 		initialize = function(server_uri) {

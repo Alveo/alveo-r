@@ -9,7 +9,7 @@ Description: Provides an interface to interact with the API of the Alveo, see al
 License: GNU GPL 3
 Depends:
     RCurl,
-    jsonlite,
+    rjson,
 	testthat,
     emuSX
 Collate:

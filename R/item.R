@@ -12,12 +12,12 @@ Item <- setRefClass("Item",
 		##' @return item list metadata as json
 		get_metadata = function() {
 			res <- api_request(uri)
-			return(fromJSON(res)$`alveo:metadata`)
+			return(rjson::fromJSON(res)$`alveo:metadata`)
 		},
 
 		get_all_metadata = function() {
 			res <- api_request(uri)
-			return(fromJSON(res))
+			return(rjson::fromJSON(res))
 		},
 
 		##' Return the indexable text for an item if any as a string. The URL is an item URL of the form /catalog/{id}
@@ -61,7 +61,7 @@ Item <- setRefClass("Item",
 			}
 
 			res <- api_request(paste(uri, annotations_url, sep=""))
-			return(fromJSON(res))
+			return(rjson::fromJSON(res))
 		},
 
 		show = function() {
