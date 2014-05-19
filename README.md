@@ -15,7 +15,7 @@ Older versions of the binaries can be found in dated directories at [this page](
 
 Example Usage:
 
-	client <- RestClient(server_uri="app.alveo.org.au")
+	client <- RestClient(server_uri="app.alveo.edu.au")
 	client$get_api_version()
 
 	results <- client$search_metadata("music")
