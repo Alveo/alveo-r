@@ -64,3 +64,15 @@ Then inside R run the following commands:
     library(emuSX)
     
 where `<path to binary>` is the path to the binary downloaded above
+    
+### Testing
+
+Tests are written using the 'testthat' package and are in the tests directory.  To run the tests use the 'devtools' library and run the following commands in an R session in the project directory:
+
+    library(testthat)
+    library(devtools)
+    
+    test()
+
+the test can be re-run after changes are made without re-starting the R session (devtools reloads the module).  
+
