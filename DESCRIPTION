@@ -18,3 +18,5 @@ Collate:
     'document.R'
     'item.R'
     'item_list.R'
+    'cache.R'
+    

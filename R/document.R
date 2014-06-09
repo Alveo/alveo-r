@@ -12,32 +12,41 @@ Document <- setRefClass("Document",
 		##' @title get_document
 		##' @return document, which may be binary data
 		get_content = function() {
-			header <- get_header_contents()
-
-			res <- getURLContent(uri, httpheader=header)
+			res <- api_request(uri)
+            
 			return(res)
 		},
 
-		##' Download the document and store it in the directory 'destination'. Create the directory if it doesn't exist
+		##' Download the document either to the cache or a given destination directory
 		##' @title download_document
+        ##' @param destination the destination directory (optional)
 		##' @return local name of the downloaded file
-		download = function(destination) {
-			# R in Windows strangely can't handle directory paths with trailing slashes
-			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
-				destination <- substr(destination, 1, nchar(destination)-1)
-			}
+        ##' 
+		download = function(destination=NULL) {
+            
+            if(is.null(destination)) {
+                
+                filename = getCacheDocument(uri)
+                
+            } else {
+                
+    			# R in Windows strangely can't handle directory paths with trailing slashes
+    			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+    				destination <- substr(destination, 1, nchar(destination)-1)
+    			}
 			
-			content <- get_content()
+    			content <- get_content()
 
-			if(!file.exists(destination)) {
-				dir.create(destination)
-			}
+    			if(!file.exists(destination)) {
+    				dir.create(destination)
+    			}
 
-			basename <- basename(uri)
-			filename <- file.path(destination, basename)
+    			basename <- basename(uri)
+    			filename <- file.path(destination, basename)
 
-			writeBin(as.vector(content), filename)
+    			writeBin(as.vector(content), filename)
 
+            }
 			return(filename)
 		},
 

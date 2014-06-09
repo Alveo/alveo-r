@@ -31,20 +31,53 @@ require(rjson)
 ##' @return cache directory name as a string
 'cache_dir' <- function() {
 	config <- read_config()
+    
+	if(file.exists(Sys.getenv("HOME"))) {
+		home <- Sys.getenv("HOME")
+	}
+	else {
+		stop("Make sure your $HOME environment variable is set")
+	}
+    
+	current_dir <- getwd()
+	setwd(home)
 
-	return(config$cacheDir)
+	cacheDir <- config$cacheDir
+
+	if(!is.null(cacheDir) && file.exists(cacheDir)) {
+			cacheDir <- normalizePath(cacheDir)
+	}
+	else if(!is.null(cacheDir) && !file.exists(cacheDir)) {
+		# R in Windows strangely can't handle directory paths with trailing slashes
+		if(substr(cacheDir, nchar(cacheDir), nchar(cacheDir)+1) == "/") {
+			cacheDir <- substr(cacheDir, 1, nchar(cacheDir)-1)
+		}
+		dir.create(cacheDir)
+		cacheDir <- normalizePath(cacheDir)
+	}
+	else {
+		if(!file.exists(file.path(home, "alveo_cache"))) {
+			dir.create(file.path(home, "alveo_cache"))
+		}
+		cacheDir <- file.path(home, "alveo_cache")
+	}
+	setwd(current_dir)
+	return(cacheDir)
 }
 
 ##' Perform a request for the given url, sending the API key along in the header, return the response
 ##' @title api_request
 ##' @return API response as json
-'api_request' <- function(url, data = NULL) {
+'api_request' <- function(url, data = NULL, binary=FALSE) {
 	header <- get_header_contents()
 
 	if(!is.null(data)) {
 		header <- c(header, 'Content-Type' = 'application/json')
 		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST", .opts = list(ssl.verifypeer = FALSE))
 	}
+    else if (binary) {
+		req <- getBinaryURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))
+    }
 	else {
 		req <- getURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))
 	}
