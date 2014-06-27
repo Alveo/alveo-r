@@ -61,7 +61,7 @@ Then inside R run the following commands:
     install.packages("uuid")
     install.packages("stringr")
     
-    # install package. it'll pick binary automaticall if it's not a source package
+    # install package. it'll pick binary automatically if it's not a source package
     install.packages("<path to binary>", repos = NULL, type = 'source')
     library(emuSX)
     
