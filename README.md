@@ -58,6 +58,9 @@ Then inside R run the following commands:
     install.packages('testthat')
     install.packages("websockets")
     install.packages("base64enc")
+    install.packages("caTools")
+    install.packages("uuid")
+    install.packages("stringr")
     
     # install package
     install.packages("<path to binary>")
