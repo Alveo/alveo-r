@@ -60,3 +60,4 @@ Document <- setRefClass("Document",
 		}
 	)
 )
+

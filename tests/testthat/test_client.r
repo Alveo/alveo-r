@@ -112,13 +112,7 @@ test_that("Can get a document from an item", {
     # local file should be there
     expect_that(file.exists(local), is_true())
     
-    # check file size
-    expect_that(file.info(local)$size, equals(2220))
-    
-    # look at the content
-    
-    text <- doc$get_content()
-    expect_that(text, matches("At all periods during"))        
+      
 })
 
 
@@ -128,7 +122,7 @@ test_that("Can get a txt document", {
 	config <- read_config()
 	client <- RestClient(config$base_url)
 	
-    txturi <- "https://ic2-hcsvlab-staging2-vm.intersect.org.au/catalog/cooee/2-334/document/2-334-plain.txt"
+    txturi <- paste(config$base_url, "catalog/cooee/2-334/document/2-334-plain.txt", sep="")
     
     txtdoc <- Document(uri=txturi)
     local <- txtdoc$download()
@@ -146,6 +140,9 @@ test_that("Can get a txt document", {
     local2 <- txtdoc$download()
     expect_that(local2, equals(local))
     
+    # look at the content
+    text <- txtdoc$get_content()
+    expect_that(text, matches("At all periods during"))      
 
 })
 
@@ -156,11 +153,11 @@ test_that("Can get a wav document", {
 	config <- read_config()
 	client <- RestClient(config$base_url)
 	
-    wavuri = "https://ic2-hcsvlab-staging2-vm.intersect.org.au/catalog/rirusyd/Lecture_Theatre2_44deg/document/Lecture_Theatre2_44deg.wav"
+    wavuri <- paste(config$base_url, "catalog/rirusyd/Lecture_Theatre2_44deg/document/Lecture_Theatre2_44deg.wav", sep="")
     
     wavdoc <- Document(uri=wavuri)
     local <- wavdoc$download()
-    
+        
     # local file extension should be same as on uri
     expect_that(file_ext(local), equals("wav"))
     

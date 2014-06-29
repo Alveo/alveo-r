@@ -14,28 +14,45 @@
 ##' 
 ##' 
 'getCacheDocument' <- function(url, content=FALSE) {
-	directory <- cache_dir()
 
-	tmpFilename <- paste(digest(url, "md5"), ".", file_ext(url), sep="")
+	tmpFilename <- getCacheName(url)
         
-	if(file.exists(file.path(directory, tmpFilename))) {
-		cachedFile <- file.path(directory, tmpFilename)
+	if(file.exists(tmpFilename)) {
         if (content) {
-            res <- readBin(cachedFile, raw())
+            res <- readBin(tmpFilename, raw())
         }
     } else {
 		res <- api_request(url, binary=TRUE)
-		writeBin(res, file.path(directory, tmpFilename))
+		writeBin(res, tmpFilename)
 		writeCacheListing(url, tmpFilename)
-		cachedFile <- file.path(directory, tmpFilename)                    
     }
     if(content) {
         return(res)
     } else {
-        return(cachedFile) 
+        return(tmpFilename) 
     }
 }
 
+##' getCacheName
+##' return a local filename to use for a downloaded file
+getCacheName <- function(url) {
+    
+	config <- read_config()
+    directory <- cache_dir()
+    
+    base <- paste(config$base_url, "catalog/", sep="")
+    
+    if( substring(url, 1, nchar(base)) == base)  {
+        path <- substring(url, nchar(base)+1)
+        local <- file.path(directory, path)
+        if( !file.exists(dirname(local)) ) {
+            dir.create(dirname(local), recursive=T, showWarnings=F)
+        }
+    } else {
+        local <- paste(digest(url, "md5"), ".", file_ext(url), sep="")
+    }
+    return(local)
+}
 
 ##' Records the uri to filename mapping to the cache contents file
 ##' @title writeCacheListing
@@ -63,7 +80,8 @@
 ##' @title emptyCache
 'emptyCache' <- function() {
 	directory <- cache_dir()
-	file.remove(file.path(directory, list.files(directory)))
+	unlink(directory, recursive=T)
+    dir.create(directory)
 	file.create(file.path(directory, "cache_contents"))
 	return(TRUE)
 }
@@ -74,7 +92,7 @@
 'removeItemFromCache' <- function(filename) {
 	directory <- cache_dir()
 	if(file.exists(file.path(directory, filename))) {
-		file.remove(file.path(directory, filename))
+		unlink(file.path(directory, filename))
 		con  <- file(file.path(directory, "cache_contents"), open = "r")
 		files <- c()
 		while (length(oneLine <- readLines(con, n = 1, warn = FALSE)) > 0) {

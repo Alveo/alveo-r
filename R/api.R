@@ -73,7 +73,7 @@ require(rjson)
 
 	if(!is.null(data)) {
 		header <- c(header, 'Content-Type' = 'application/json')
-		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST", .opts = list(ssl.verifypeer = FALSE))
+		req <- postForm(url, .opts=list(postfields=data, httpheader=header, ssl.verifypeer = FALSE), style="POST")
 	}
     else if (binary) {
 		req <- getBinaryURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))

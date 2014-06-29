@@ -2,3 +2,5 @@ exportPattern("^[^\\.]")
 
 
 import(rjson)
+import(emuSX)
+import(RCurl)

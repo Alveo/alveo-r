@@ -90,3 +90,50 @@ ItemList <- setRefClass("ItemList",
 		}
 	)
 )
+
+
+##' Make a new seglist containing only the given labels
+##'
+##' @param seglist an Emu segment list
+##' @param labels a vector of labels
+##'
+##' @returns a new segment list containing only those labels
+##' in the vector supplied
+##' @export
+filterSegs <- function(seglist, labels) {
+
+    test <- label(seglist) %in% labels
+    
+    return(seglist[test,])
+}
+
+##' Download all files referenced by a segment list 
+##'
+##' Take a segment list containing URLs, download the files and
+##' replace the filenames with the local names, return a new
+##' segment list
+##'
+##' @param seglist an Emu segment list
+##' @returns a new segment list that references the downloaded files
+##' @export
+localiseSegs <- function(seglist) {
+  
+  urls <- unique(utt(seglist))
+  
+  getit <- function(uri) {  
+    doc <- Document(uri=uri)
+    local <- doc$download()
+    return(local)
+  }
+  
+  files <- sapply(urls, getit, USE.NAMES=FALSE)
+
+  utts <- utt(seglist)
+  for(i in 1:length(files)) {
+    utts <- replace(utts, utts==urls[i], paste("file://", files[i], sep=""))
+  }
+  
+  newsegs <- modify.seglist(seglist, utt=utts)
+  return(newsegs)
+}
+
