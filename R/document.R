@@ -1,3 +1,10 @@
+##' A class representing a single document from the Alveo virtual lab
+##'
+##' @field uri The URI of the document
+##' @field type The document type (audio, video, text)
+##' @field size The document size in bytes
+##' @export Document
+##' @exportClass Document
 Document <- setRefClass("Document",
 
 	fields = list(
@@ -8,22 +15,15 @@ Document <- setRefClass("Document",
 
 	methods = list(
 
-		##' Get the document at the given URL
-		##' @title get_document
-		##' @return document, which may be binary data
 		get_content = function() {
+            "Get the document at the given URL, return value may be binary data"
 			res <- api_request(uri)
             
 			return(res)
 		},
 
-		##' Download the document either to the cache or a given destination directory
-		##' @title download_document
-        ##' @param destination the destination directory (optional)
-		##' @return local name of the downloaded file
-        ##' 
 		download = function(destination=NULL) {
-            
+            "Download the document either to the cache or a given destination directory, return the local name of the downloaded file"
             if(is.null(destination)) {
                 
                 filename = getCacheDocument(uri)

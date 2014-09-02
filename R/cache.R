@@ -1,3 +1,5 @@
+require(digest)
+
 ##' Downloads a single document from a URL to a local cache, uses
 ##'  cached version if present
 ##' 
@@ -34,7 +36,8 @@
 }
 
 ##' getCacheName
-##' return a local filename to use for a downloaded file
+##' @param url The URL we want to cache
+##' @return a local filename to use for a downloaded file
 getCacheName <- function(url) {
     
 	config <- read_config()
@@ -49,13 +52,15 @@ getCacheName <- function(url) {
             dir.create(dirname(local), recursive=T, showWarnings=F)
         }
     } else {
-        local <- paste(digest(url, "md5"), ".", file_ext(url), sep="")
+        local <- paste(digest::digest(url, "md5"), ".", file_ext(url), sep="")
     }
     return(local)
 }
 
 ##' Records the uri to filename mapping to the cache contents file
 ##' @title writeCacheListing
+##' @param uri The URI being cached
+##' @param filename The local filename that was used to cache the file
 'writeCacheListing' <- function(uri, filename) {
 	directory <- cache_dir()
 	write(paste(uri, filename, sep=" -> "), file=file.path(directory, "cache_contents"), append=TRUE, sep="\n")
@@ -89,6 +94,7 @@ getCacheName <- function(url) {
 
 ##' Removes requested file from the cache if it exists
 ##' @title removeItemFromCache
+##' @param filename the name of the local file to remove from the cache
 'removeItemFromCache' <- function(filename) {
 	directory <- cache_dir()
 	if(file.exists(file.path(directory, filename))) {

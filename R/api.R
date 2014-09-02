@@ -2,6 +2,8 @@ require(rjson)
 
 ##' Read the user configuration file by default ~/alveo.config and return a hash of keys and values
 ##' @title read_config
+##' @param config_file Location of the configuration file to read, default is 'alveo.config' in the home directory
+##' @export
 'read_config' <- function(config_file = NULL) {
 	if(is.null(config_file)) {
 		config_file <- file.path(Sys.getenv("HOME"), "alveo.config")
@@ -20,6 +22,7 @@ require(rjson)
 ##' Return the API key as read from the user config file
 ##' @title api_key
 ##' @return API key as a string
+##' @export
 'api_key' <- function() {
 	config <- read_config()
 
@@ -29,6 +32,7 @@ require(rjson)
 ##' Return the cache directory name as read from the user config file
 ##' @title cache_dir
 ##' @return cache directory name as a string
+##' @export
 'cache_dir' <- function() {
 	config <- read_config()
     
@@ -67,7 +71,11 @@ require(rjson)
 
 ##' Perform a request for the given url, sending the API key along in the header, return the response
 ##' @title api_request
+##' @param url The API URL that will be used for the request
+##' @param data Any data to be sent along with the request
+##' @param binary A boolean, if TRUE then expect a binary result from the request
 ##' @return API response as json
+##' @export
 'api_request' <- function(url, data = NULL, binary=FALSE) {
 	header <- get_header_contents()
 

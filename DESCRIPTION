@@ -4,20 +4,16 @@ Title: R interface to the Alveo API
 Version: 1.0.2
 Date: 2013-12-16
 Author: Matt Hillman
-Maintainer: Matt <matthew@intersect.org.au>
-Description: Provides an interface to interact with the API of the Alveo, see alveo.org.au
+Maintainer: Steve Cassidy <Steve.Cassidy@mq.edu.au>
+Description: Provides an interface to interact with the API of the Alveo
+    virtual laboratory, see alveo.org.au
 License: GPL-3
 Depends:
-    emuSX,
-	testthat
-Imports:
+    emuR,
+    wrassp,
+    digest,
+    methods,
     rjson,
     RCurl
-Collate:
-    'api.R'
-    'client.R'
-    'document.R'
-    'item.R'
-    'item_list.R'
-    'cache.R'
-    
+Suggests:
+    testthat

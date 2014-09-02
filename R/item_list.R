@@ -1,3 +1,10 @@
+##' A class representing an Alveo Item List
+##' 
+##' @field name The item list name
+##' @field uri The uri for the item list on the Alveo server
+##' @field items A list of items in the item list
+##' @export ItemList
+##' @exportClass ItemList
 ItemList <- setRefClass("ItemList",
 
 	fields = list(
@@ -9,6 +16,7 @@ ItemList <- setRefClass("ItemList",
 	methods = list(
 
 		get_item = function(index) {
+            "Get an item given the (numerical) index, returns an Item object"
 			if(index > length(items) || index < 1) {
 				stop('index out of bounds')
 			}
@@ -17,6 +25,7 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		get_item_documents = function() {
+            "Return a vector of all of the documents for all of the items in this item list"
 			item_docs <- c()
 			for(i in 1:length(items)) {
 				docs <- get_item(i)$get_documents()
@@ -28,6 +37,7 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		download = function(destination, format="zip") {
+            "download all items in this item list, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
 			# R in Windows strangely can't handle directory paths with trailing slashes
 			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
 				destination <- substr(destination, 1, nchar(destination)-1)
@@ -40,12 +50,13 @@ ItemList <- setRefClass("ItemList",
 				dir.create(destination)
 			}
 
-			filename <- file.path(destination, paste(name, ".zip", sep=""))
+			filename <- file.path(destination, paste(name, format, sep="."))
 			writeBin(as.vector(res), filename)
 			return(filename)
 		},
 
 		get_segment_list = function(type="", label="") {
+            "Query annotations on this item list and return an Emu segment list.  By default returns all annotations, specify the 'type' argument to restrict the annotation types, specify the 'label' argument to match specific labels"
 			if(num_items() == 0) {
 				stop("Item list cannot be empty")
 			}
@@ -77,6 +88,7 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		num_items = function() {
+            "Return the number of items in this item list"
 			return(length(items))
 		},
 
@@ -92,12 +104,12 @@ ItemList <- setRefClass("ItemList",
 )
 
 
-##' Make a new seglist containing only the given labels
+##' Make a new segment list containing only the given labels
 ##'
 ##' @param seglist an Emu segment list
 ##' @param labels a vector of labels
 ##'
-##' @returns a new segment list containing only those labels
+##' @return a new segment list containing only those labels
 ##' in the vector supplied
 ##' @export
 filterSegs <- function(seglist, labels) {
@@ -114,7 +126,7 @@ filterSegs <- function(seglist, labels) {
 ##' segment list
 ##'
 ##' @param seglist an Emu segment list
-##' @returns a new segment list that references the downloaded files
+##' @return a new segment list that references the downloaded files
 ##' @export
 localiseSegs <- function(seglist) {
   
@@ -133,7 +145,7 @@ localiseSegs <- function(seglist) {
     utts <- replace(utts, utts==urls[i], paste("file://", files[i], sep=""))
   }
   
-  newsegs <- modify.seglist(seglist, utt=utts)
+  newsegs <- modify.seglist(seglist, utts=utts)
   return(newsegs)
 }
 
