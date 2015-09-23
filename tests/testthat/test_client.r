@@ -1,7 +1,12 @@
 require(testthat)
 require(alveo)
+require(tools)
 
 context("Client Tests")
+
+generate_identifier <- function() {
+  return(paste(sample(c(letters[1:6],0:9),10,replace=TRUE), collapse=""))
+}
 
 test_that("Can read the configuration file", {
 	
@@ -47,8 +52,6 @@ test_that("Can get item lists", {
     expect_that(mode(item_lists$own[[1]]$name), equals("character"))
     expect_that(item_lists$own[[1]]$item_list_url, matches("http*"))
     
-    
-    
 })
 
 
@@ -65,6 +68,97 @@ test_that("Can get an item list", {
     expect_that(item_list$uri, equals(url))
     expect_that(item_list$items[1], matches("http*"))
 })
+
+test_that("Can create and delete an item list", {
+  
+  config <- read_config()
+  client <- RestClient(config$base_url)
+  
+  items <- NULL
+  items$num_result <- 2
+  items$items <- c("https://app.alveo.edu.au/catalog/mitcheldelbridge/S3819s1",
+                   "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1")
+  
+  listname <- generate_identifier()
+  
+  json <- client$create_item_list(items$items, listname)
+  
+  expect_that(json$success, equals(paste("2 items added to new item list ", listname, sep="")))
+  
+  listuri <- client$get_item_list_uri_by_name(listname)
+  
+  expect_that(substring(listuri, 0, 4), equals("http"))
+  
+  json <- client$delete_item_list(listuri)
+  
+  expect_that(json$success, equals(paste("item list ", listname, " deleted successfully", sep="")))
+  
+})
+
+
+test_that("Can get documents from an item list", {
+  
+  config <- read_config()
+  client <- RestClient(config$base_url)
+  
+  items <- NULL
+  items$num_result <- 2
+  items$items <- c("https://app.alveo.edu.au/catalog/mitcheldelbridge/S3819s1",
+                   "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1")
+  
+  listname <- generate_identifier()
+  
+  json <- client$create_item_list(items$items, listname)
+  
+  expect_that(json$success, equals(paste("2 items added to new item list ", listname, sep="")))
+  
+  item_list <- client$get_item_list_by_name(listname)
+  documents <- item_list$get_item_documents()
+  expect_that(length(documents), equals(4))
+  
+  # now just the audio files
+  audiodocs <- item_list$get_item_documents(type="Audio")
+  expect_that(length(audiodocs), equals(2))
+  expect_that(audiodocs[[1]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.wav"))
+  
+  
+  # now audio and Textgrid
+  alldocs <- item_list$get_item_documents(type=c("Audio", "TextGrid"))
+  expect_that(length(alldocs), equals(4))
+  expect_that(alldocs[[1]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.wav"))
+  expect_that(alldocs[[2]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.TextGrid"))
+  
+  # now matching a pattern
+  docs <- item_list$get_item_documents(pattern='S3819s1')
+  expect_that(length(docs), equals(2))
+  expect_that(docs[[1]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S3819s1/document/S3819s1.wav"))
+  expect_that(docs[[2]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S3819s1/document/S3819s1.TextGrid"))
+  
+  json <- client$delete_item_list(item_list$uri)
+  
+})
+
+
+
+test_that("Can create an item list from a query", {
+	
+	config <- read_config()
+	client <- RestClient(config$base_url)
+	listname <- generate_identifier()
+	
+  items <- client$search_metadata('collection_name:mitcheldelbridge AND sex:f AND identifier:*s1 AND uid:*19')
+  
+  json <- client$create_item_list(items$items, listname)
+        
+  expect_that(json$success, equals(paste(items$num_results, " items added to new item list ", listname, sep="")))
+
+  # cleanup
+	listuri <- client$get_item_list_uri_by_name(listname)
+
+  client$delete_item_list(listuri)
+  
+})
+
 
 
 test_that("Can get an item", {
@@ -88,15 +182,12 @@ test_that("Can get a document from an item", {
     
     emptyCache()
 	
-	config <- read_config()
-	client <- RestClient(config$base_url)
+	  config <- read_config()
+	  client <- RestClient(config$base_url)
 	
-    item_lists <- client$get_item_lists()
+    itemuri <- paste(config$base_url, "catalog/cooee/2-334", sep="")
     
-    url <- item_lists$own[[1]]$item_list_url
-    item_list <- client$get_item_list(url)
-    
-    item <- client$get_item(item_list$items[1])
+    item <- client$get_item(itemuri)
             
     doc <- item$get_document(1)
     
@@ -119,8 +210,8 @@ test_that("Can get a document from an item", {
 test_that("Can get a txt document", {
 	
     emptyCache()
-	config <- read_config()
-	client <- RestClient(config$base_url)
+  	config <- read_config()
+	  client <- RestClient(config$base_url)
 	
     txturi <- paste(config$base_url, "catalog/cooee/2-334/document/2-334-plain.txt", sep="")
     
@@ -171,6 +262,20 @@ test_that("Can get a wav document", {
     local2 <- wavdoc$download()
     expect_that(local2, equals(local))
 
+})
+
+
+test_that("Can run a SPARQL query", {
+	
+	config <- read_config()
+	client <- RestClient(config$base_url)
+    collection <- "mitcheldelbridge"
+    query <- "select * where { ?a ?b ?c } LIMIT 10"
+	
+    json <- client$sparql(query, collection)
+    
+    expect_that(json$head$vars, equals(c("a", "b", "c")))
+    expect_that(length(json$results$bindings), equals(10))
 })
 
 

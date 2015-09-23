@@ -49,7 +49,7 @@ extractSegs <- function(Seglist=NULL, FileExtAndtrackname=NULL,
   if(!is.null(OnTheFlyFunctionName)){
     funcFormals = formals(OnTheFlyFunctionName)
     funcFormals[names(OnTheFlyParas)] = OnTheFlyParas
-    funcFormals$ToFile = FALSE
+    funcFormals$toFile = FALSE
     funcFormals$optLogFilePath = OnTheFlyOptLogFilePath
     cat('\n  INFO: applying', OnTheFlyFunctionName, 'to', length(Seglist$utts), 'files\n')
     

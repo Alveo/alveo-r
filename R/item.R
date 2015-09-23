@@ -36,10 +36,25 @@ Item <- setRefClass("Item",
 			}
 		},
 
-		get_documents = function() {
-            "Return a list of all documents for this item"
-			metadata <- get_all_metadata()
-			return(metadata$`alveo:documents`)
+		get_documents = function(types=NULL, pattern=NULL) {
+       "Return a list of all documents for this item
+        If type is given, it should be a sequence of type names, return only documents
+        of with dc:type in this sequence, eg. ('Audio', 'TextGrid').
+        If pattern is given, return only documents with dc:identifier matching this regular expression"
+      
+        metadata <- get_all_metadata()
+  			docs <- metadata$`alveo:documents`
+        
+        item_docs <- c()
+  			for(j in 1:length(docs)) {
+  			  if (is.null(types) || docs[[j]]$`dc:type` %in% types) {
+  			    if (is.null(pattern) || regexpr(pattern, docs[[j]]$`dc:identifier`)==1 ) {
+  			      d = Document(item=uri, uri=docs[[j]]$`alveo:url`, type=as.character(docs[[j]]$`dc:type`), size=as.character(docs[[j]]$`alveo:size`))
+  			      item_docs <- c(item_docs, d)
+  			    }
+  			  }
+  			}
+        return(item_docs)
 		},
 
 		get_document = function(index) {
@@ -49,7 +64,7 @@ Item <- setRefClass("Item",
 				stop('index out of bounds')
 			}
 			doc <- metadata$`alveo:documents`[[index]]
-			return(Document(uri=doc$`alveo:url`, type=as.character(doc$`dc:type`), size=as.character(doc$`alveo:size`)))
+			return(Document(item=uri, uri=doc$`alveo:url`, type=as.character(doc$`dc:type`), size=as.character(doc$`alveo:size`)))
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {
@@ -70,10 +85,8 @@ Item <- setRefClass("Item",
 		},
 
 		show = function() {
-			cat("ID: \n")
-			methods::show(id)
-			cat("URI: \n")
-			methods::show(uri)
+			cat("ID:", id, "\n")
+			cat("URI:", uri, "\n")
 		}
 	)
 )

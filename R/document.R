@@ -8,6 +8,7 @@
 Document <- setRefClass("Document",
 
 	fields = list(
+    item = "character",
 		uri = "character",
 		type = "character",
 		size = "character"
@@ -16,8 +17,10 @@ Document <- setRefClass("Document",
 	methods = list(
 
 		get_content = function() {
-            "Get the document at the given URL, return value may be binary data"
-			res <- api_request(uri)
+      "Get the document at the given URL, return value may be binary data"
+      
+      # get documents in binary mode since in general we don't know what they are            
+			res <- api_request(uri, binary=TRUE)
             
 			return(res)
 		},
@@ -51,12 +54,10 @@ Document <- setRefClass("Document",
 		},
 
 		show = function() {
-			cat("URI: \n")
-			methods::show(uri)
-			cat("Type: \n")
-			methods::show(type)
-			cat("Size: \n")
-			methods::show(size)
+      cat("Alveo Document from item ", item, "\n")
+			cat("URI: ", uri, "\n")
+			cat("Type: ", type, "\n")
+			cat("Size: ", size, "\n")
 		}
 	)
 )

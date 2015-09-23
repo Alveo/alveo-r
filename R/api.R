@@ -81,16 +81,27 @@ require(rjson)
 
 	if(!is.null(data)) {
 		header <- c(header, 'Content-Type' = 'application/json')
-		req <- postForm(url, .opts=list(postfields=data, httpheader=header, ssl.verifypeer = FALSE), style="POST")
-	}
-    else if (binary) {
-		req <- getBinaryURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))
-    }
+		req <- postForm(url, .opts=list(postfields=data, httpheader=header), style="POST")
+	}    
+  else if (binary) {
+		req <- getBinaryURL(url, httpheader=header)
+  }
 	else {
-		req <- getURL(url, httpheader=header, .opts = list(ssl.verifypeer = FALSE))
+		req <- getURL(url, httpheader=header)
 	}
-
 	return(req)
+}
+
+##' Perform a DELETE request to a URI on the Alveo server
+##' @param url The API URL that will be used for the request
+##' @return API response as json
+##' @export
+'api_delete_request' <- function(url) {
+  header <- get_header_contents()
+  
+  req <- httpDELETE(url, httpheader=header)
+  
+  return(req)
 }
 
 ##' Sets default headers for HCS vLab API calls

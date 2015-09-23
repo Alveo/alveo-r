@@ -9,11 +9,11 @@ Description: Provides an interface to interact with the API of the Alveo
     virtual laboratory, see alveo.org.au
 License: GPL-3
 Depends:
-    emuR,
-    wrassp,
     digest,
     methods,
     rjson,
-    RCurl
+    RCurl,
+    emuR
 Suggests:
-    testthat
+    testthat,
+    tools

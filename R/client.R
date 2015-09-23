@@ -53,6 +53,33 @@ RestClient <- setRefClass("RestClient",
 			return(ItemList(name=res$name, uri=uri, items=res$items))
 		},
 
+    get_item_list_by_name = function(name) {
+      "Return an item list given its name"
+      
+      uri <- get_item_list_uri_by_name(name)
+      res <- rjson::fromJSON(api_request(uri))
+      return(ItemList(name=res$name, uri=uri, items=res$items))
+    },
+    
+    get_item_list_uri_by_name = function(name) {
+        "Return an item list uri given it's name, 
+        if no such list is found, return NULL"
+        info <- get_item_lists()
+        # find out item list in the result and return the URL
+        for (el in info$own) {
+          if (el$name == name) {
+            return(el$item_list_url)
+          }
+        }
+        for (el in info$shared) {
+          if (el$name == name) {
+            return(el$item_list_url)
+          }
+        }
+        
+        return(NULL)
+    },
+    
 		get_item = function(uri) {
             "Return an item given its URI. Returns an Item object."
 			res <- rjson::fromJSON(api_request(uri))
@@ -86,9 +113,21 @@ RestClient <- setRefClass("RestClient",
 
 		create_item_list = function(items, name) {
             "Create an item list on the Alveo server given a list of items (eg. the result of a query from search_metadata)"
-			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rsjon::toJSON(list(items=items)))
+			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rjson::toJSON(list(items=items)))
 			return(rjson::fromJSON(res))
 		},
+    
+    delete_item_list = function(uri) {
+        "Delete the item list with the given uri"
+        res <- api_delete_request(uri)
+        return(rjson::fromJSON(res))
+    },
+
+    sparql = function(query, collection) {
+        "Run a SPARQL query on the Alveo server against the given collection. Return the result."
+        res <- api_request(paste(server_uri, "/sparql/", collection, "?query=", URLencode(query, reserved=TRUE), sep=""))
+        return(rjson::fromJSON(res))
+    },
 
 		initialize = function(server_uri) {
             "Initialize the client object with the given server URI"

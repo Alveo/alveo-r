@@ -24,20 +24,23 @@ ItemList <- setRefClass("ItemList",
 			return(Item(id=res$`alveo:metadata`$`alveo:handle`, uri=items[index]))
 		},
 
-		get_item_documents = function() {
-            "Return a vector of all of the documents for all of the items in this item list"
+		get_item_documents = function(types=NULL, pattern=NULL) {
+            "Return a vector of all of the documents for all of the items in this item list.
+            If type is given, it should be a sequence of type names, return only documents
+            of with dc:type in this sequence, eg. ('Audio', 'TextGrid').
+            If pattern is given, return only documents with dc:identifier matching this regular expression"
 			item_docs <- c()
 			for(i in 1:length(items)) {
-				docs <- get_item(i)$get_documents()
-				for(j in 1:length(docs)) {
-					item_docs <- c(item_docs, docs[[j]]$`alveo:url`)
-				}
+				docs <- get_item(i)$get_documents(types=types, pattern=pattern)
+        for(j in 1:length(docs)) {
+          item_docs <- c(item_docs, docs[[j]])
+        }
 			}
 			return(item_docs)
 		},
 
 		download = function(destination, format="zip") {
-            "download all items in this item list, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
+      "download all items in this item list, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
 			# R in Windows strangely can't handle directory paths with trailing slashes
 			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
 				destination <- substr(destination, 1, nchar(destination)-1)
@@ -55,6 +58,38 @@ ItemList <- setRefClass("ItemList",
 			return(filename)
 		},
 
+		downloadDB = function(type=NULL, pattern=NULL, dbname=NULL, destination=NULL) {
+		  "download all items in this item list as an Emu Database, destination is the name of a directory to write the result in."
+      
+          # use the item list name for the database if not provided
+          if (is.null(dbname)) {
+            dbname = name
+          }
+      
+          downloaddir <- tempdir()
+      
+          # ensure that the destination directory exists
+          dir.create(destination, showWarnings=FALSE)
+          
+		  getit <- function(doc) {
+		    local <- doc$download(downloaddir)
+		    return(local)
+		  }
+		  
+          docs <- get_item_documents(type=type, pattern=pattern)
+      
+		  files <- sapply(docs, getit, USE.NAMES=FALSE)
+		  
+		  convert_TextGridCollection_to_emuDB(downloaddir, "sampleMD", destination)
+		  
+          # cleanup downloads
+      
+      
+          return(dbname)
+		},
+    
+    
+    
 		get_segment_list = function(type="", label="") {
             "Query annotations on this item list and return an Emu segment list.  By default returns all annotations, specify the 'type' argument to restrict the annotation types, specify the 'label' argument to match specific labels"
 			if(num_items() == 0) {
@@ -93,10 +128,8 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		show = function() {
-			cat("Name: \n")
-			methods::show(name)
-			cat("URI: \n")
-			methods::show(uri)
+			cat("Name: ", name, "\n")
+			cat("URI: ", uri, "\n")
 			cat("Items: \n")
 			methods::show(items)
 		}
