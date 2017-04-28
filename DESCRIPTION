@@ -12,7 +12,7 @@ Depends:
     digest,
     methods,
     rjson,
-    RCurl,
+    curl,
     emuR
 Suggests:
     testthat,

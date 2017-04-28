@@ -211,7 +211,7 @@ test_that("Can get a txt document", {
 	
     emptyCache()
   	config <- read_config()
-	  client <- RestClient(config$base_url)
+	client <- RestClient(config$base_url)
 	
     txturi <- paste(config$base_url, "catalog/cooee/2-334/document/2-334-plain.txt", sep="")
     

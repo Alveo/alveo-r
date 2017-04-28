@@ -79,43 +79,43 @@ RestClient <- setRefClass("RestClient",
         
         return(NULL)
     },
-    
-		get_item = function(uri) {
-            "Return an item given its URI. Returns an Item object."
-			res <- rjson::fromJSON(api_request(uri))
-			return(Item(id=res$`alveo:metadata`$`alveo:handle`, uri=uri))
-		},
 
-		search_metadata = function(query) {
-            "Search metadata using the given query, return a list of items."
-			query <- URLencode(query, reserved=TRUE)
-			res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
-			return(rjson::fromJSON(res))
-		},
+	get_item = function(uri) {
+        "Return an item given its URI. Returns an Item object."
+		res <- rjson::fromJSON(api_request(uri))
+		return(Item(id=res$`alveo:metadata`$`alveo:handle`, uri=uri))
+	},
 
-		download_items = function(items, destination, name, format="zip") {
-            "download all items in this list of items, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
-			# R in Windows strangely can't handle directory paths with trailing slashes
-			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
-				destination <- substr(destination, 1, nchar(destination)-1)
-			}
+	search_metadata = function(query) {
+        "Search metadata using the given query, return a list of items."
+		query <- URLencode(query, reserved=TRUE)
+		res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
+		return(rjson::fromJSON(res))
+	},
 
-			zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=rjson::toJSON(list(items=items)))
+	download_items = function(items, destination, name, format="zip") {
+        "download all items in this list of items, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
+		# R in Windows strangely can't handle directory paths with trailing slashes
+		if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+			destination <- substr(destination, 1, nchar(destination)-1)
+		}
 
-			if(!file.exists(destination)) {
-				dir.create(destination)
-			}
+		zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=rjson::toJSON(list(items=items)))
 
-			filename <- file.path(destination, paste(name, ".zip", sep=""))
-			writeBin(as.vector(zip), filename)
-			return(filename)
-		},
+		if(!file.exists(destination)) {
+			dir.create(destination)
+		}
 
-		create_item_list = function(items, name) {
-            "Create an item list on the Alveo server given a list of items (eg. the result of a query from search_metadata)"
-			res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rjson::toJSON(list(items=items)))
-			return(rjson::fromJSON(res))
-		},
+		filename <- file.path(destination, paste(name, ".zip", sep=""))
+		writeBin(as.vector(zip), filename)
+		return(filename)
+	},
+
+	create_item_list = function(items, name) {
+        "Create an item list on the Alveo server given a list of items (eg. the result of a query from search_metadata)"
+		res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rjson::toJSON(list(items=items)))
+		return(rjson::fromJSON(res))
+	},
     
     delete_item_list = function(uri) {
         "Delete the item list with the given uri"

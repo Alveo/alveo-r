@@ -32,30 +32,33 @@ ItemList <- setRefClass("ItemList",
 			item_docs <- c()
 			for(i in 1:length(items)) {
 				docs <- get_item(i)$get_documents(types=types, pattern=pattern)
-        for(j in 1:length(docs)) {
-          item_docs <- c(item_docs, docs[[j]])
-        }
+                    for(j in 1:length(docs)) {
+                      item_docs <- c(item_docs, docs[[j]])
+                    }
 			}
 			return(item_docs)
 		},
 
-		download = function(destination, format="zip") {
-      "download all items in this item list, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
+		download = function(destination, type=NULL, pattern=NULL) {
+            "download all items in this item list, destination is the name of a directory to write the result in, format (zip or WARC or json). Returns the filename that is created."
 			# R in Windows strangely can't handle directory paths with trailing slashes
-			if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
-				destination <- substr(destination, 1, nchar(destination)-1)
-			}
+            if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
+                destination <- substr(destination, 1, nchar(destination)-1)
+            }
+            
+            # ensure that the destination directory exists
+            dir.create(destination, showWarnings=FALSE)
+            
+            getit <- function(doc) {
+              local <- doc$download(destination, binary=TRUE)
+              return(local)
+            }
+            
+            docs <- get_item_documents(type=type, pattern=pattern)
+            
+            files <- sapply(docs, getit, USE.NAMES=FALSE)
 
-			header <- get_header_contents()
-			res <- getBinaryURL(paste(uri, "?format=", format, sep=""), httpheader=header, .opts = list(ssl.verifypeer = FALSE))
-
-			if(!file.exists(destination)) {
-				dir.create(destination)
-			}
-
-			filename <- file.path(destination, paste(name, format, sep="."))
-			writeBin(as.vector(res), filename)
-			return(filename)
+            return(files)
 		},
 
 		downloadDB = function(type=NULL, pattern=NULL, dbname=NULL, destination=NULL) {
@@ -68,11 +71,13 @@ ItemList <- setRefClass("ItemList",
       
           downloaddir <- tempdir()
       
+          cat("writing to ", downloaddir)
+          
           # ensure that the destination directory exists
           dir.create(destination, showWarnings=FALSE)
           
 		  getit <- function(doc) {
-		    local <- doc$download(downloaddir)
+		    local <- doc$download(downloaddir, binary=TRUE)
 		    return(local)
 		  }
 		  
@@ -80,7 +85,7 @@ ItemList <- setRefClass("ItemList",
       
 		  files <- sapply(docs, getit, USE.NAMES=FALSE)
 		  
-		  convert_TextGridCollection_to_emuDB(downloaddir, "sampleMD", destination)
+		  convert_TextGridCollection(downloaddir, "sampleMD", destination)
 		  
           # cleanup downloads
       

@@ -16,16 +16,16 @@ Document <- setRefClass("Document",
 
 	methods = list(
 
-		get_content = function() {
+		get_content = function(binary=FALSE) {
       "Get the document at the given URL, return value may be binary data"
       
-      # get documents in binary mode since in general we don't know what they are            
-			res <- api_request(uri, binary=TRUE)
+            # get documents in binary mode 
+            res <- api_request(uri, binary=binary)
             
 			return(res)
 		},
 
-		download = function(destination=NULL) {
+		download = function(destination=NULL, binary=FALSE) {
             "Download the document either to the cache or a given destination directory, return the local name of the downloaded file"
             if(is.null(destination)) {
                 
@@ -38,7 +38,7 @@ Document <- setRefClass("Document",
     				destination <- substr(destination, 1, nchar(destination)-1)
     			}
 			
-    			content <- get_content()
+    			content <- get_content(binary=binary)
 
     			if(!file.exists(destination)) {
     				dir.create(destination)
