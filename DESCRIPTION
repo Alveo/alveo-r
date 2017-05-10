@@ -13,7 +13,7 @@ Depends:
     methods,
     rjson,
     curl,
-    emuR
-Suggests:
-    testthat,
+    emuR,
     tools
+Suggests:
+    testthat

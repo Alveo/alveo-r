@@ -93,7 +93,7 @@ require(curl)
     else if (binary) {
         handle_setheaders(h, .list=headers)
         req <- curl_fetch_memory(url, handle=h)
-        response <- rawToBinary(req$content)
+        response <- req$content
     }
     else {
         handle_setheaders(h, .list=headers)
