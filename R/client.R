@@ -57,8 +57,12 @@ RestClient <- setRefClass("RestClient",
       "Return an item list given its name"
       
       uri <- get_item_list_uri_by_name(name)
-      res <- rjson::fromJSON(api_request(uri))
-      return(ItemList(name=res$name, uri=uri, items=res$items))
+      if (is.null(uri)) {
+        return(NULL)
+      } else {
+        res <- rjson::fromJSON(api_request(uri))
+        return(ItemList(name=res$name, uri=uri, items=res$items))
+      }
     },
     
     get_item_list_uri_by_name = function(name) {
@@ -76,7 +80,6 @@ RestClient <- setRefClass("RestClient",
             return(el$item_list_url)
           }
         }
-        
         return(NULL)
     },
 
@@ -89,7 +92,8 @@ RestClient <- setRefClass("RestClient",
 	search_metadata = function(query) {
         "Search metadata using the given query, return a list of items."
 		query <- URLencode(query, reserved=TRUE)
-		res <- api_request(paste(server_uri, "/catalog/search?metadata=", query, sep=""))
+		uri <- paste(server_uri, "/catalog/search?metadata=", query, sep="")
+		res <- api_request(uri)
 		return(rjson::fromJSON(res))
 	},
 
@@ -99,8 +103,9 @@ RestClient <- setRefClass("RestClient",
 		if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
 			destination <- substr(destination, 1, nchar(destination)-1)
 		}
-
-		zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=rjson::toJSON(list(items=items)))
+	  data = NULL
+	  data$items = items
+		zip <- api_request(paste(server_uri, "/catalog/download_items?format=", format, sep=""), data=data)
 
 		if(!file.exists(destination)) {
 			dir.create(destination)
@@ -113,14 +118,16 @@ RestClient <- setRefClass("RestClient",
 
 	create_item_list = function(items, name) {
         "Create an item list on the Alveo server given a list of items (eg. the result of a query from search_metadata)"
-		res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=rjson::toJSON(list(items=items)))
-		return(rjson::fromJSON(res))
+	  data = NULL
+	  data$items = items
+		res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=data)
+		return(jsonlite::fromJSON(res))
 	},
     
     delete_item_list = function(uri) {
         "Delete the item list with the given uri"
         res <- api_delete_request(uri)
-        return(rjson::fromJSON(res))
+        return(res)
     },
 
     sparql = function(query, collection) {

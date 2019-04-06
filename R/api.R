@@ -1,5 +1,5 @@
 require(rjson)
-require(curl)
+require(httr)
 
 ##' Read the user configuration file by default ~/alveo.config
 ##' and return a hash of keys and values
@@ -80,25 +80,20 @@ require(curl)
 ##' @export
 'api_request' <- function(url, data = NULL, binary=FALSE) {
 
-    h <- new_handle()
-    headers <- get_header_contents()
+    headers <-get_header_contents()
 
     if(!is.null(data)) {
-        headers$'Content-Type' <- 'application/json'
-        handle_setheaders(h, .list=headers)
-        handle_setform(h, .list=data)
-        req <- curl_fetch_memory(url, handle=h)
-        response <- rawToChar(req$content)
+        #headers$'Content-Type' <- 'application/json'
+        r = POST(url, add_headers(.headers=headers), body=data, encode="json")
+        response = content(r, "text")
     }
     else if (binary) {
-        handle_setheaders(h, .list=headers)
-        req <- curl_fetch_memory(url, handle=h)
-        response <- req$content
+      r = GET(url, add_headers(.headers=headers))
+      response = content(r, "raw")
     }
     else {
-        handle_setheaders(h, .list=headers)
-        req <- curl_fetch_memory(url, handle=h)
-        response <- rawToChar(req$content)
+      r = GET(url, add_headers(.headers=headers))
+      response = content(r, "text")
     }
     
     return(response)
@@ -108,7 +103,7 @@ require(curl)
 'get_header_contents' <- function() {
 
     key <- api_key()
-    return(list('X-API-KEY' = key, 'Accept' = 'application/json'))
+    return(c('X-API-KEY' = key, 'Accept' = 'application/json'))
 }
 
 
@@ -117,10 +112,13 @@ require(curl)
 ##' @return API response as json
 ##' @export
 'api_delete_request' <- function(url) {
-    h <- new_handle()
+  
     headers <- get_header_contents()
-    handle_setheaders(h, list=headers)
-    req <- httpDELETE(url, httpheader=header)
+    
+    r <- DELETE(url, add_headers(.headers=headers))
+    
+   # handle_setheaders(h, list=headers)
+   # req <- httpDELETE(url, httpheader=header)
 
-    return(req)
+    return(content(r))
 }
