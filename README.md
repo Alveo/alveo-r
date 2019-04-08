@@ -23,16 +23,17 @@ Example Usage:
 	item$get_metadata()
 	item$get_indexable_text()
 	item$get_documents()
-	item$get_annotations(type="phonetic", label="h")
 
 	document <- item$get_document(1)
 	document$download("/home/user/R")
 
 ### Installation
 
+To install this package directly from Github you need the `devtools` library:
 
-
-    
+   library(devtools)
+   install_github('Alveo/alveo-r')
+   
 ### Testing
 
 Tests are written using the 'testthat' package and are in the tests directory.  To run the tests use the 'devtools' library and run the following commands in an R session in the project directory:
