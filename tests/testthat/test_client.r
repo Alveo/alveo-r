@@ -15,8 +15,7 @@ test_that("Can read the configuration file", {
 	expect_that(config$apiKey, is_a("character"))
 	expect_match(config$base_url, "http.*")
 	expect_that(api_key(), is_a("character"))
-	expect_that(cache_dir(), is_a("character")) # maybe also that it names a real directory?
-	
+
 })
 
 test_that("Can connect to a server", {
@@ -181,8 +180,6 @@ test_that("Can get an item", {
 
 test_that("Can get a document from an item", {
     
-    emptyCache()
-	
 	  config <- read_config()
 	  client <- RestClient(config$base_url)
 	
@@ -210,9 +207,8 @@ test_that("Can get a document from an item", {
 
 test_that("Can get a txt document", {
 	
-    emptyCache()
   	config <- read_config()
-	client <- RestClient(config$base_url)
+	  client <- RestClient(config$base_url)
 	
     txturi <- paste(config$base_url, "catalog/cooee/2-334/document/2-334-plain.txt", sep="")
     
@@ -241,9 +237,8 @@ test_that("Can get a txt document", {
 
 test_that("Can get a wav document", {
 	
-    emptyCache()
-	config <- read_config()
-	client <- RestClient(config$base_url)
+  	config <- read_config()
+	  client <- RestClient(config$base_url)
 	
     wavuri <- paste(config$base_url, "catalog/rirusyd/Lecture_Theatre2_44deg/document/Lecture_Theatre2_44deg.wav", sep="")
     

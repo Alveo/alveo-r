@@ -121,7 +121,7 @@ RestClient <- setRefClass("RestClient",
 	  data = NULL
 	  data$items = items
 		res <- api_request(paste(server_uri, "/item_lists?name=", URLencode(name, reserved=TRUE), sep=""), data=data)
-		return(jsonlite::fromJSON(res))
+		return(rjson::fromJSON(res))
 	},
     
     delete_item_list = function(uri) {

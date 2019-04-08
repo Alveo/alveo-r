@@ -7,13 +7,12 @@ Author: Matt Hillman
 Maintainer: Steve Cassidy <Steve.Cassidy@mq.edu.au>
 Description: Provides an interface to interact with the API of the Alveo
     virtual laboratory, see alveo.org.au
-License: GPL-3
+License: MIT + file LICENSE
 Depends:
     digest,
     methods,
     rjson,
-    curl,
-    emuR,
+    httr,
     tools
 Suggests:
     testthat
