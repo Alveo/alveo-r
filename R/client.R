@@ -22,6 +22,10 @@ RestClient <- setRefClass("RestClient",
 
 	methods = list(
 
+	  initialize = function(uri="https://app.alveo.edu.au/", ...) {
+	    server_uri <<- uri
+	  },
+	  
 		get_api_version = function() {
             "Return the current API version number"
 			res <- rjson::fromJSON(api_request(paste(server_uri, "/version", sep="")))

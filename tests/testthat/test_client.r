@@ -19,15 +19,24 @@ test_that("Can read the configuration file", {
 })
 
 test_that("Can connect to a server", {
-	
-	config <- read_config()
-	
-	client <- RestClient(config$base_url)
-	
-	# we get some kind of string back from the server
-	expect_that(client$get_api_version() == "", is_false())
-	
-	})
+  
+  config <- read_config()
+  
+  client <- RestClient(config$base_url)
+  
+  # we get some kind of string back from the server
+  expect_that(client$get_api_version() == "", is_false())
+  
+})
+
+test_that("Can connect to the default server", {
+  
+  client <- RestClient()
+  
+  # we get some kind of string back from the server
+  expect_that(client$get_api_version() == "", is_false())
+  
+})
 
 test_that("Can decode annotation context", {
 	
