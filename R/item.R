@@ -48,7 +48,7 @@ Item <- setRefClass("Item",
         item_docs <- c()
   			for(j in 1:length(docs)) {
   			  if (is.null(types) || docs[[j]]$`dcterms:type` %in% types) {
-  			    if (is.null(pattern) || regexpr(pattern, docs[[j]]$`dcterms:identifier`)==1 ) {
+  			    if (is.null(pattern) || regexpr(pattern, docs[[j]]$`dcterms:identifier`)>0 ) {
   			      d = Document(item=uri, uri=docs[[j]]$`alveo:url`, type=as.character(docs[[j]]$`dcterms:type`), size=as.character(docs[[j]]$`alveo:size`))
   			      item_docs <- c(item_docs, d)
   			    }

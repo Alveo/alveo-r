@@ -143,6 +143,11 @@ test_that("Can get documents from an item list", {
   expect_that(alldocs[[1]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.wav"))
   expect_that(alldocs[[2]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.TextGrid"))
   
+  # now matching a pattern at the end of the name
+  docs <- item_list$get_item_documents(pattern='s1.wav')
+  expect_that(length(docs), equals(2))
+  expect_that(alldocs[[1]]$uri, equals("https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.wav"))
+
 })
 
 
