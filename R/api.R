@@ -16,7 +16,11 @@ require(httr)
         config <- rjson::fromJSON(configtxt)
     }
     else {
-        stop(cat("Config file ", config_file, " not found"))
+        stop(cat("Config file ", config_file, 
+                 " not found. Please visit the Alveo website and
+download your API key via the ACCOUNT menu. Save the file to ",
+                 Sys.getenv("HOME"),
+                 " on your computer."))
     }
     return(config)
 }

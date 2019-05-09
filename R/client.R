@@ -140,6 +140,22 @@ RestClient <- setRefClass("RestClient",
         return(rjson::fromJSON(res))
     },
 
+  	get_contributions = function() {
+  	  "Get a list of contributions. Return a list with components $own and $shared,
+  	   each contains a list of $id, $name, $url, $accessible"
+  	  
+  	  res <- api_request(paste(server_uri, "contrib", sep=""))
+  	  return(rjson::fromJSON(res))
+  	},
+	
+	
+	  get_contribution = function(uri) {
+	    "Get details of a contribution given the URL"
+	    
+	    res <- api_request(uri)
+	    return(rjson::fromJSON(res))
+	  },
+	
 		initialize = function(server_uri) {
             "Initialize the client object with the given server URI"
 			if(grepl("http://", server_uri)) {

@@ -274,6 +274,29 @@ test_that("Can get a wav document", {
 
 })
 
+test_that("can get a list of contributions", {
+  
+  config <- read_config()
+  client <- RestClient(config$base_url)
+  contribs <- client$get_contributions()
+  
+  expect_that(mode(contribs$own), equals("list"))
+  expect_that(mode(contribs$shared), equals("list"))
+  
+  expect_that(mode(contribs$own[[1]]$name), equals("character"))
+  expect_match(contribs$own[[1]]$url, "http*")
+  
+})
+
+test_that("can I get details of a contribution", {
+  
+  config <- read_config()
+  client <- RestClient(config$base_url)
+  contrib <- client$get_contribution('https://app.alveo.edu.au/contrib/6')
+  
+  expect_that(contrib$name, equals("Austalk Manual Transcriptions"))
+  expect_that(length(contrib$documents), equals(180))
+})
 
 test_that("Can run a SPARQL query", {
 	
