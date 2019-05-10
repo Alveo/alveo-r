@@ -1,9 +1,9 @@
 Package: alveo
 Type: Package
 Title: R interface to the Alveo API
-Version: 1.0.2
-Date: 2013-12-16
-Author: Matt Hillman
+Version: 1.0.3
+Date: 2019-05-10
+Author: Steve Cassidy
 Maintainer: Steve Cassidy <Steve.Cassidy@mq.edu.au>
 Description: Provides an interface to interact with the API of the Alveo
     virtual laboratory, see alveo.org.au

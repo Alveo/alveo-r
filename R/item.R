@@ -58,7 +58,7 @@ Item <- setRefClass("Item",
 		},
 
 		get_document = function(index) {
-            "Return the document given by the (numerical) index, returns a Document object"
+    "Return the document given by the (numerical) index, returns a Document object"
 			metadata <- get_all_metadata()
 			if(index > length(metadata$`alveo:documents`) || index < 1) {
 				stop('index out of bounds')
@@ -68,8 +68,10 @@ Item <- setRefClass("Item",
 		},
 
 		get_annotations = function(type = NULL, label = NULL) {
-            "Return all annotations on this document, the 'type' and 'label' arguments can be used to restrict the annotations returned."
-			annotations_url <- "/annotations"
+     "Return all annotations on this document, the 'type' and 'label' 
+		  arguments can be used to restrict the annotations returned."
+		
+		  annotations_url <- "/annotations"
 			if(!is.null(type) && !is.null(label)) {
 				annotations_url <- paste(annotations_url, "?type=", type, "&label=", label, sep="")
 			}

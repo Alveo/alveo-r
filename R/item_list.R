@@ -40,9 +40,9 @@ ItemList <- setRefClass("ItemList",
 		},
 
 		download = function(destination, type=NULL, pattern=NULL) {
-    "Download all items in this item list, destination is the name of a directory 
-		to write the result in, format (zip or WARC or json). 
-		Returns the filename that is created."
+      "Download all items in this item list, destination is the name of a directory 
+  		to write the result in, format (zip or WARC or json). 
+  		Returns the filename that is created."
 			
 		  # R in Windows strangely can't handle directory paths with trailing slashes
       if(substr(destination, nchar(destination), nchar(destination)+1) == "/") {
