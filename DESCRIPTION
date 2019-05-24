@@ -6,13 +6,17 @@ Date: 2019-05-10
 Author: Steve Cassidy
 Maintainer: Steve Cassidy <Steve.Cassidy@mq.edu.au>
 Description: Provides an interface to interact with the API of the Alveo
-    virtual laboratory, see alveo.org.au
+    virtual laboratory (see http://alveo.edu.au).  Alveo stores language data
+    as audio, video and text resources and provides an API for programmatic
+    access. 
 License: MIT + file LICENSE
-Depends:
-    digest,
+Encoding: UTF-8
+Depends: 
     methods,
     rjson,
     httr,
-    tools
-Suggests:
+Suggests: 
+    tools,
+    httptest,
     testthat
+RoxygenNote: 6.1.1

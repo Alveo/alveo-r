@@ -1,0 +1,276 @@
+{
+    "own": [
+        {
+            "name": "alveo-R-test-list-zero",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1710",
+            "num_items": 2,
+            "shared": false
+        },
+        {
+            "name": "Australia-Female-29",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1296",
+            "num_items": 566,
+            "shared": false
+        },
+        {
+            "name": "Australia-Female-30+",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1295",
+            "num_items": 761,
+            "shared": false
+        },
+        {
+            "name": "Australia-Male",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1294",
+            "num_items": 957,
+            "shared": false
+        },
+        {
+            "name": "children-small",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1324",
+            "num_items": 543,
+            "shared": false
+        },
+        {
+            "name": "children-tiny",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1325",
+            "num_items": 16,
+            "shared": false
+        },
+        {
+            "name": "cooee-early",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/974",
+            "num_items": 16,
+            "shared": true
+        },
+        {
+            "name": "digit-sample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1422",
+            "num_items": 4,
+            "shared": false
+        },
+        {
+            "name": "impulse-samples",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1489",
+            "num_items": 2,
+            "shared": false
+        },
+        {
+            "name": "over-50-hvd",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1345",
+            "num_items": 12,
+            "shared": false
+        },
+        {
+            "name": "short-cooee",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1281",
+            "num_items": 3,
+            "shared": false
+        },
+        {
+            "name": "stories",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1300",
+            "num_items": 16,
+            "shared": false
+        },
+        {
+            "name": "transcription-sample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1310",
+            "num_items": 6,
+            "shared": true
+        }
+    ],
+    "shared": [
+        {
+            "name": "1790s-documents",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1341",
+            "num_items": 40,
+            "shared": true
+        },
+        {
+            "name": "Adelaide",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/478",
+            "num_items": 6840,
+            "shared": true
+        },
+        {
+            "name": "art-item-list",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1172",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "austalk-adult-csl-child-match",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/904",
+            "num_items": 250,
+            "shared": true
+        },
+        {
+            "name": "austalk_catepillar",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/64",
+            "num_items": 309,
+            "shared": true
+        },
+        {
+            "name": "austalk_textgrid_sample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/484",
+            "num_items": 10,
+            "shared": true
+        },
+        {
+            "name": "cooee1788",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/25",
+            "num_items": 16,
+            "shared": true
+        },
+        {
+            "name": "COOEE ALL",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/95",
+            "num_items": 1354,
+            "shared": true
+        },
+        {
+            "name": "cooee sample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/53",
+            "num_items": 129,
+            "shared": true
+        },
+        {
+            "name": "DE-test2",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1118",
+            "num_items": 8,
+            "shared": true
+        },
+        {
+            "name": "dialogue-sample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/180",
+            "num_items": 6,
+            "shared": true
+        },
+        {
+            "name": "different",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/132",
+            "num_items": 888,
+            "shared": true
+        },
+        {
+            "name": "gum-tree",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/84",
+            "num_items": 58,
+            "shared": true
+        },
+        {
+            "name": "mava s101-s120",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1095",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s121-s140",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1096",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s141-s160",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1097",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s161-s180",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1098",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s181-s200",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1099",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s1-s10",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1170",
+            "num_items": 10,
+            "shared": true
+        },
+        {
+            "name": "mava s1-s20",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1090",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s1-s200",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1101",
+            "num_items": 200,
+            "shared": true
+        },
+        {
+            "name": "mava s1-s205",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1169",
+            "num_items": 205,
+            "shared": true
+        },
+        {
+            "name": "mava s201-s205",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1100",
+            "num_items": 5,
+            "shared": true
+        },
+        {
+            "name": "mava s21-40",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1091",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s41-s60",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1092",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s61-s80",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1093",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mava s81-s100",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1094",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "mdsample",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/52",
+            "num_items": 20,
+            "shared": true
+        },
+        {
+            "name": "M&D_Test_140904",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/168",
+            "num_items": 10,
+            "shared": true
+        },
+        {
+            "name": "rose",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/82",
+            "num_items": 245,
+            "shared": true
+        },
+        {
+            "name": "stuff1",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/1421",
+            "num_items": 3,
+            "shared": true
+        },
+        {
+            "name": "thistle",
+            "item_list_url": "https://app.alveo.edu.au/item_lists/83",
+            "num_items": 16,
+            "shared": true
+        }
+    ]
+}

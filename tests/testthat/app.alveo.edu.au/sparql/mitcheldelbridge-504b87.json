@@ -1,0 +1,153 @@
+{
+    "head": {
+        "vars": [
+            "a",
+            "b",
+            "c"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "c": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/AusNCObject"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/audience"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "ausnc:individual"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/communication_context"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "ausnc:face_to_face"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/date_of_recording"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "1960"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/document"
+                },
+                "c": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3/document/S4565s3.wav"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/document"
+                },
+                "c": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3/document/S4565s3.TextGrid"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/fathers_occupations"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "boiler maker"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/fathers_place_of_birth"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "Sydney"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/institute"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "Canterbury Girls' High School"
+                }
+            },
+            {
+                "a": {
+                    "type": "uri",
+                    "value": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S4565s3"
+                },
+                "b": {
+                    "type": "uri",
+                    "value": "http://ns.ausnc.org.au/schemas/ausnc_md_model/interactivity"
+                },
+                "c": {
+                    "type": "literal",
+                    "value": "ausnc:read"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "@context": "https://app.alveo.edu.au/schema/json-ld",
+    "alveo:catalog_url": "https://app.alveo.edu.au/catalog/cooee/2-334",
+    "alveo:metadata": {
+        "dc:title": "unspecified",
+        "dc:created": "1848",
+        "dc:identifier": "2-334",
+        "dc:isPartOf": "cooee",
+        "Word Count": "379",
+        "ausnc:mode": "unspecified",
+        "ausnc:speech_style": "unspecified",
+        "ausnc:interactivity": "unspecified",
+        "ausnc:communication_context": "unspecified",
+        "Discourse Type": "narrative",
+        "discourse_type": "unspecified",
+        "olac:language": "eng",
+        "ausnc:audience": "unspecified",
+        "communication_setting": "unspecified",
+        "communication_medium": "unspecified",
+        "publication_status": "unspecified",
+        "written_mode": "unspecified",
+        "ausnc:document": "https://app.alveo.edu.au/catalog/cooee/2-334/document/2-334.txt, https://app.alveo.edu.au/catalog/cooee/2-334/document/2-334-plain.txt",
+        "dcterms:type": "Original, Text",
+        "alveo:date_group": "1840 - 1849",
+        "alveo:handle": "cooee:2-334",
+        "alveo:full_text": "\n\n\nAt all periods during the progress of the colony, and up to the present time, single men could obtain wives, on application, from amongst the female convicts, at the chief depot in Paramatta.\nThe form is a strange one, and well worth relating. A man desiring a wife, and being unable to suit himself elsewhere, proceeds to the female factory at Paramatta, and presents himself to the matron and master of that institution. The certificate of a clergyman or magistrate is produced, setting forth that the applicant is a proper person to have a wife given to him, from the many under charge of the matron. The applicant is then introduced into a room of the building, whilst the matron proceeds to the first class department, that contains the best behaved of the female convicts. Notice is here given that a wife is required, and such as are willing to be married step forward, and are marshalled in batches into the presence of the would- be Benedict. On they pass, the man speaking to individuals as they attract his attention, inquiring their age, capabilities, &c, till some one is met with who pleases his taste, and possesses the required perfections.  The inquiries then become mutual; the lover wishes to know if the fair one has ever been married; the question is reiterated by the female, who also desires to learn how many head of cattle or sheep, or what land or houses, her lover is possessed of. Mutual explanations take place, and if satisfactory on both sides, the matron is acquainted with the fact, and a day named for the marriage.\nAll the time, this lady is present, and has frequently to witness strange and ludicrous scenes; scores of females passing for review, between whose personal and other claims, the applicant balances his mind, sometimes leaving it to the matron to decide whom he shall take. When this knotty point is settled, the authorities are informed of the fact; the clergyman of the place publishes the bans, and if no impediment intervenes, on the appointed day, the parties are married; the woman leaving the factory, and returning to a state of freedom in the colony, during good conduct. These marriages are of frequent occurrence, thousands having thus obtained wives.\n",
+        "SCHEMA_localityName_tesim": "New_South_Wales",
+        "olac:speaker": "https://app.alveo.edu.au/catalog/cooee/person/2-334addressee",
+        "COOEE_register_tesim": "Public Written",
+        "ALVEO_display_document_tesim": "https://app.alveo.edu.au/catalog/cooee/2-334/document/2-334-plain.txt",
+        "COOEE_texttype_tesim": "Memoirs",
+        "dc11:source": "Ward, 1969",
+        "BIBO_pages_tesim": "131-32",
+        "alveo:sparqlEndpoint": "https://app.alveo.edu.au/sparql/cooee"
+    },
+    "alveo:primary_text_url": "https://app.alveo.edu.au/catalog/cooee/2-334/primary_text.json",
+    "alveo:annotations_url": "https://app.alveo.edu.au/catalog/cooee/2-334/annotations.json",
+    "alveo:documents": [
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/cooee/2-334/document/2-334-plain.txt",
+            "type": "Text (Text)",
+            "alveo:size": "2.2 kB",
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "2-334-plain.txt",
+            "dcterms:extent": "2220",
+            "dcterms:title": "2-334#Text",
+            "dcterms:type": "Text",
+            "alveov:size": "2220"
+        },
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/cooee/2-334/document/2-334.txt",
+            "type": "Text (Original)",
+            "alveo:size": "2.4 kB",
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "2-334.txt",
+            "dcterms:extent": "2379",
+            "dcterms:title": "2-334#Original",
+            "dcterms:type": "Original",
+            "alveov:size": "2379"
+        }
+    ],
+    "document_directory": [
+        "https://app.alveo.edu.au/cooee/2-334/document"
+    ]
+}

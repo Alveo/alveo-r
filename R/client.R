@@ -1,7 +1,7 @@
 require(rjson)
 
 #' A class representing a link to the Alveo virtual laboratory
-#'
+#' 
 #' RestClient(server_uri)
 #' \code{server_uri} is the URI of the Alveo server
 #'
@@ -14,6 +14,8 @@ require(rjson)
 #' @field server_uri The URI of the Alveo server
 #' @export RestClient
 #' @exportClass RestClient
+#' @import rjson
+#' @import httr
 RestClient <- setRefClass("RestClient",
 
 	fields = list(
@@ -171,7 +173,7 @@ RestClient <- setRefClass("RestClient",
 
 		show = function() {
 			cat("Server URI: \n")
-			methods::show(server_uri)
+			cat(server_uri)
 		}
 	)
 )

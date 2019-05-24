@@ -1,0 +1,71 @@
+{
+    "@context": "https://app.alveo.edu.au/schema/json-ld",
+    "alveo:catalog_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1",
+    "alveo:metadata": {
+        "dc:title": "unspecified",
+        "dc:created": "unspecified",
+        "dc:identifier": "S2519s1",
+        "dc:isPartOf": "mitcheldelbridge",
+        "ausnc:mode": "spoken",
+        "ausnc:speech_style": "scripted",
+        "ausnc:interactivity": "read",
+        "ausnc:communication_context": "face_to_face",
+        "discourse_type": "interactive_discourse",
+        "olac:language": "eng",
+        "ausnc:audience": "individual",
+        "communication_setting": "unspecified",
+        "communication_medium": "unspecified",
+        "publication_status": "unspecified",
+        "written_mode": "unspecified",
+        "ausnc:document": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.TextGrid, http://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.wav",
+        "dcterms:type": "TextGrid, Audio",
+        "alveo:date_group": "Unknown",
+        "alveo:handle": "mitcheldelbridge:S2519s1",
+        "alveo:full_text": "unspecified",
+        "AUSNC_misc_tesim": "Kurri Kurri",
+        "AUSNC_place_of_birth_tesim": "Kurri Kurri",
+        "AUSNC_institute_tesim": "Maitland Girls High School",
+        "AUSNC_fathers_occupations_tesim": "process worker",
+        "olac:speaker": "http://app.alveo.edu.au/catalog/mitcheldelbridge/person/S2519s1",
+        "AUSNC_place_tesim": "Maitland",
+        "AUSNC_fathers_place_of_birth_tesim": "England",
+        "AUSNC_uid_tesim": "2519",
+        "ALVEO_display_document_tesim": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.wav",
+        "AUSNC_recording_environment_tesim": "narrative & sample1 only, prepared narrative, some students maybe 4th year students",
+        "AUSNC_tsid_tesim": "n44_45-1",
+        "AUSNC_sex_tesim": "f",
+        "AUSNC_state_tesim": "NSW",
+        "AUSNC_date_of_recording_tesim": "1959",
+        "AUSNC_mothers_place_of_birth_tesim": "Kurri Kurri",
+        "alveo:sparqlEndpoint": "https://app.alveo.edu.au/sparql/mitcheldelbridge"
+    },
+    "alveo:primary_text_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/primary_text.json",
+    "alveo:annotations_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/annotations.json",
+    "alveo:documents": [
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.wav",
+            "type": "Audio",
+            "alveo:size": null,
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "S2519s1.wav",
+            "dcterms:extent": "177718",
+            "dcterms:title": "S2519s1#Audio",
+            "dcterms:type": "Audio",
+            "alveov:size": "177718"
+        },
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2519s1/document/S2519s1.TextGrid",
+            "type": "TextGrid",
+            "alveo:size": "5.1 kB",
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "S2519s1.TextGrid",
+            "dcterms:extent": "5065",
+            "dcterms:title": "S2519s1#TextGrid",
+            "dcterms:type": "TextGrid",
+            "alveov:size": "5065"
+        }
+    ],
+    "document_directory": [
+        "https://app.alveo.edu.au/mitcheldelbridge/S2519s1/document"
+    ]
+}

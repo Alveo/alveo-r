@@ -5,6 +5,7 @@
 ##' @field items A list of items in the item list
 ##' @export ItemList
 ##' @exportClass ItemList
+##' @importFrom methods new
 ItemList <- setRefClass("ItemList",
 
 	fields = list(
@@ -73,7 +74,7 @@ ItemList <- setRefClass("ItemList",
 			cat("Name: ", name, "\n")
 			cat("URI: ", uri, "\n")
 			cat("Items: \n")
-			methods::show(items)
+			cat(items)
 		}
 	)
 )

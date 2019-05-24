@@ -1,0 +1,39 @@
+{
+    "own": [
+        {
+            "id": 6,
+            "name": "Austalk Manual Transcriptions",
+            "url": "https://app.alveo.edu.au/contrib/6"
+        },
+        {
+            "id": 8,
+            "name": "Austalk Words MQ",
+            "url": "https://app.alveo.edu.au/contrib/8"
+        },
+        {
+            "id": 11,
+            "name": "MQ Maptask Transcripts",
+            "url": "https://app.alveo.edu.au/contrib/11"
+        }
+    ],
+    "shared": [
+        {
+            "id": 5,
+            "name": "AusTalk Dolby transcriptions",
+            "url": "https://app.alveo.edu.au/contrib/5",
+            "accessible": true
+        },
+        {
+            "id": 4,
+            "name": "Austalk MapTasks Transcribed",
+            "url": "https://app.alveo.edu.au/contrib/4",
+            "accessible": true
+        },
+        {
+            "id": 10,
+            "name": "transcriber-sample",
+            "url": "https://app.alveo.edu.au/contrib/10",
+            "accessible": true
+        }
+    ]
+}

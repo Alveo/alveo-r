@@ -1,0 +1,71 @@
+{
+    "@context": "https://app.alveo.edu.au/schema/json-ld",
+    "alveo:catalog_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1",
+    "alveo:metadata": {
+        "dc:title": "unspecified",
+        "dc:created": "unspecified",
+        "dc:identifier": "S2375s1",
+        "dc:isPartOf": "mitcheldelbridge",
+        "ausnc:mode": "spoken",
+        "ausnc:speech_style": "scripted",
+        "ausnc:interactivity": "read",
+        "ausnc:communication_context": "face_to_face",
+        "discourse_type": "interactive_discourse",
+        "olac:language": "eng",
+        "ausnc:audience": "individual",
+        "communication_setting": "unspecified",
+        "communication_medium": "unspecified",
+        "publication_status": "unspecified",
+        "written_mode": "unspecified",
+        "ausnc:document": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.wav, http://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.TextGrid",
+        "dcterms:type": "Audio, TextGrid",
+        "alveo:date_group": "Unknown",
+        "alveo:handle": "mitcheldelbridge:S2375s1",
+        "alveo:full_text": "unspecified",
+        "AUSNC_misc_tesim": "Newcastle",
+        "AUSNC_place_of_birth_tesim": "Newcastle",
+        "AUSNC_institute_tesim": "Newcastle Technical High School",
+        "AUSNC_fathers_occupations_tesim": "invalid pensioner (formerly steel worker)",
+        "olac:speaker": "http://app.alveo.edu.au/catalog/mitcheldelbridge/person/S2375s1",
+        "AUSNC_place_tesim": "Newcastle",
+        "AUSNC_fathers_place_of_birth_tesim": "North England",
+        "AUSNC_uid_tesim": "2375",
+        "ALVEO_display_document_tesim": "http://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.wav",
+        "AUSNC_recording_environment_tesim": "narrative & sample1 only",
+        "AUSNC_tsid_tesim": "n42a-1",
+        "AUSNC_sex_tesim": "m",
+        "AUSNC_state_tesim": "NSW",
+        "AUSNC_mothers_place_of_birth_tesim": "Newcastle",
+        "AUSNC_date_of_recording_tesim": "1959",
+        "alveo:sparqlEndpoint": "https://app.alveo.edu.au/sparql/mitcheldelbridge"
+    },
+    "alveo:primary_text_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/primary_text.json",
+    "alveo:annotations_url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/annotations.json",
+    "alveo:documents": [
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.wav",
+            "type": "Audio",
+            "alveo:size": null,
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "S2375s1.wav",
+            "dcterms:extent": "241942",
+            "dcterms:title": "S2375s1#Audio",
+            "dcterms:type": "Audio",
+            "alveov:size": "241942"
+        },
+        {
+            "alveo:url": "https://app.alveo.edu.au/catalog/mitcheldelbridge/S2375s1/document/S2375s1.TextGrid",
+            "type": "TextGrid",
+            "alveo:size": "5.6 kB",
+            "rdf:type": "http://xmlns.com/foaf/0.1/Document",
+            "dcterms:identifier": "S2375s1.TextGrid",
+            "dcterms:extent": "5582",
+            "dcterms:title": "S2375s1#TextGrid",
+            "dcterms:type": "TextGrid",
+            "alveov:size": "5582"
+        }
+    ],
+    "document_directory": [
+        "https://app.alveo.edu.au/mitcheldelbridge/S2375s1/document"
+    ]
+}

@@ -1,0 +1,734 @@
+{
+    "name": "Austalk Manual Transcriptions",
+    "description": "Transcriptions of the re-told story and interview tasks for 92 speakers from the Austalk collection. These recordings were manually transcribed be a commercial provider. Transcriptions are roughly time-aligned with timestamps every so often in the text.  Transcripts are provided as word files and plain text.",
+    "documents": [
+        {
+            "name": "4_995_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_995_2_7_001/document/4_995_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_95_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_95_2_7_001/document/4_95_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_95_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_95_1_4_001/document/4_95_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_923_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_923_2_7_001/document/4_923_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_923_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_923_1_4_001/document/4_923_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_914_2_7_001A-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_914_2_7_001/document/4_914_2_7_001A-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_914_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_914_1_4_001/document/4_914_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_864_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_864_2_7_001/document/4_864_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_864_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_864_1_4_001/document/4_864_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_774_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_774_2_7_001/document/4_774_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_774_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_774_1_4_001/document/4_774_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_766_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_766_2_7_001/document/4_766_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_740_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_740_2_7_001/document/4_740_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_706_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_706_2_7_001/document/4_706_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_706_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_706_1_4_001/document/4_706_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_68_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_68_2_7_001/document/4_68_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_68_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_68_1_4_001/document/4_68_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_667_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_667_2_7_001/document/4_667_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_667_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_667_1_4_001/document/4_667_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_560_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_560_2_7_001/document/4_560_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_560_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_560_1_4_001/document/4_560_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_552_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_552_2_7_001/document/4_552_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_552_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_552_1_4_001/document/4_552_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_522_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_522_2_7_001/document/4_522_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_522_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_522_1_4_001/document/4_522_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_280_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_280_2_7_001/document/4_280_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_280_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_280_1_4_001/document/4_280_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_232_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_232_2_7_001/document/4_232_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_232_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_232_1_4_001/document/4_232_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_214_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_214_2_7_001/document/4_214_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_214_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_214_1_4_001/document/4_214_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_185_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_185_1_4_001/document/4_185_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_172_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_172_2_7_001/document/4_172_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_172_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_172_1_4_001/document/4_172_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1339_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1339_2_7_001/document/4_1339_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1339_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1339_1_4_001/document/4_1339_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1338_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1338_2_7_001/document/4_1338_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1338_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1338_1_4_001/document/4_1338_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1289_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1289_2_7_001/document/4_1289_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1277_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1277_2_7_001/document/4_1277_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1277_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1277_1_4_001/document/4_1277_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1266_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1266_2_7_001/document/4_1266_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1266_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1266_1_4_001/document/4_1266_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1224_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1224_2_7_001/document/4_1224_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1224_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1224_1_4_001/document/4_1224_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1145_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1145_2_7_001/document/4_1145_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1145_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1145_1_4_001/document/4_1145_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1104_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1104_2_7_001/document/4_1104_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1104_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1104_1_4_001/document/4_1104_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1064_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1064_2_7_001/document/4_1064_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1064_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1064_1_4_001/document/4_1064_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1046_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1046_2_7_001/document/4_1046_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1046_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1046_1_4_001/document/4_1046_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1015_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1015_2_7_001/document/4_1015_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "4_1015_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/4_1015_1_4_001/document/4_1015_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_997_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_997_2_7_001/document/3_997_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_997_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_997_1_4_001/document/3_997_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_988_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_988_2_7_001/document/3_988_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_988_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_988_1_4_001/document/3_988_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_81_2_7_001B-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_81_2_7_001/document/3_81_2_7_001B-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_81_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_81_1_4_001/document/3_81_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_794_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_794_2_7_001/document/3_794_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_794_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_794_1_4_001/document/3_794_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_779_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_779_2_7_001/document/3_779_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_779_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_779_1_4_001/document/3_779_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_705_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_705_2_7_001/document/3_705_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_705_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_705_1_4_001/document/3_705_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_640_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_640_2_7_001/document/3_640_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_640_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_640_1_4_001/document/3_640_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_627_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_627_2_7_001/document/3_627_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_627_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_627_1_4_001/document/3_627_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_42_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_42_2_7_001/document/3_42_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_42_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_42_1_4_001/document/3_42_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_423_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_423_2_7_001/document/3_423_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_423_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_423_1_4_001/document/3_423_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_377_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_377_2_7_001/document/3_377_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_377_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_377_1_4_001/document/3_377_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_306_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_306_2_7_001/document/3_306_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_306_1_4_001B-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_306_1_4_001/document/3_306_1_4_001B-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_306_1_4_001A-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_306_1_4_001/document/3_306_1_4_001A-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_269_2_7_001B-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_269_2_7_001/document/3_269_2_7_001B-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_269_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_269_1_4_001/document/3_269_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_258_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_258_2_7_001/document/3_258_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_258_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_258_1_4_001/document/3_258_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_112_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_112_2_7_001/document/3_112_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_112_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_112_1_4_001/document/3_112_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_1035_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_1035_2_7_001/document/3_1035_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "3_1035_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/3_1035_1_4_001/document/3_1035_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_959_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_959_2_7_001/document/2_959_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_959_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_959_1_4_001/document/2_959_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_77_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_77_2_7_001/document/2_77_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_77_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_77_1_4_001/document/2_77_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_740_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_740_2_7_001/document/2_740_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_740_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_740_1_4_001/document/2_740_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_736_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_736_2_7_001/document/2_736_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_736_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_736_1_4_001/document/2_736_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_727_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_727_2_7_001/document/2_727_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_727_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_727_1_4_001/document/2_727_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_667_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_667_2_7_001/document/2_667_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_667_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_667_1_4_001/document/2_667_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_658_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_658_2_7_001/document/2_658_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_658_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_658_1_4_001/document/2_658_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_616_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_616_2_7_001/document/2_616_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_616_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_616_1_4_001/document/2_616_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_553_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_553_2_7_001/document/2_553_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_553_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_553_1_4_001/document/2_553_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_534_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_534_2_7_001/document/2_534_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_534_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_534_1_4_001/document/2_534_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_487_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_487_2_7_001/document/2_487_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_487_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_487_1_4_001/document/2_487_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_447_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_447_2_7_001/document/2_447_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_447_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_447_1_4_001/document/2_447_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_344_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_344_2_7_001/document/2_344_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_344_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_344_1_4_001/document/2_344_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_283_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_283_2_7_001/document/2_283_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_283_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_283_1_4_001/document/2_283_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_267_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_267_2_7_001/document/2_267_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_267_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_267_1_4_001/document/2_267_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_206_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_206_2_7_001/document/2_206_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_206_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_206_1_4_001/document/2_206_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1371_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1371_2_7_001/document/2_1371_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1371_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1371_1_4_001/document/2_1371_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1350_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1350_2_7_001/document/2_1350_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1350_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1350_1_4_001/document/2_1350_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1306_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1306_1_4_001/document/2_1306_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1272_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1272_2_7_001/document/2_1272_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1272_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1272_1_4_001/document/2_1272_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_123_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_123_2_7_001/document/2_123_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_123_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_123_1_4_001/document/2_123_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1164_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1164_2_7_001/document/2_1164_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1164_1_4_001A-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1164_1_4_001/document/2_1164_1_4_001A-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_114_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_114_2_7_001/document/2_114_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_114_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_114_1_4_001/document/2_114_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_113_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_113_2_7_001/document/2_113_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_113_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_113_1_4_001/document/2_113_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_107_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_107_2_7_001/document/2_107_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_107_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_107_1_4_001/document/2_107_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1078_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1078_2_7_001/document/2_1078_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1078_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1078_1_4_001/document/2_1078_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1067_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1067_2_7_001/document/2_1067_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1067_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1067_1_4_001/document/2_1067_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1036_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1036_2_7_001/document/2_1036_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1036_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1036_1_4_001/document/2_1036_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1027_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1027_2_7_001/document/2_1027_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "2_1027_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/2_1027_1_4_001/document/2_1027_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_802_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_802_2_7_001/document/1_802_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_802_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_802_1_4_001/document/1_802_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_713_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_713_2_7_001/document/1_713_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_713_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_713_1_4_001/document/1_713_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_704_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_704_2_7_001/document/1_704_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_704_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_704_1_4_001/document/1_704_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_665_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_665_2_7_001/document/1_665_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_665_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_665_1_4_001/document/1_665_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_610_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_610_2_7_001/document/1_610_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_610_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_610_1_4_001/document/1_610_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_530_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_530_2_7_001/document/1_530_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_530_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_530_1_4_001/document/1_530_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_417_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_417_2_7_001/document/1_417_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_417_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_417_1_4_001/document/1_417_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_366_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_366_2_7_001/document/1_366_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_366_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_366_1_4_001/document/1_366_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_250_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_250_2_7_001/document/1_250_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_250_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_250_1_4_001/document/1_250_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_213_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_213_2_7_001/document/1_213_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_178_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_178_2_7_001/document/1_178_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_178_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_178_1_4_001/document/1_178_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1327_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1327_2_7_001/document/1_1327_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1327_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1327_1_4_001/document/1_1327_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1308_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1308_2_7_001/document/1_1308_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1308_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1308_1_4_001/document/1_1308_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1220_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1220_2_7_001/document/1_1220_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1220_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1220_1_4_001/document/1_1220_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1193_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1193_2_7_001/document/1_1193_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1193_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1193_1_4_001/document/1_1193_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1172_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1172_2_7_001/document/1_1172_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1172_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1172_1_4_001/document/1_1172_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1119_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1119_2_7_001/document/1_1119_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_1119_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_1119_1_4_001/document/1_1119_1_4_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_107_2_7_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_107_2_7_001/document/1_107_2_7_001-ch6-speaker16.txt"
+        },
+        {
+            "name": "1_107_1_4_001-ch6-speaker16.txt",
+            "url": "https://app.alveo.edu.au/catalog/austalk/1_107_1_4_001/document/1_107_1_4_001-ch6-speaker16.txt"
+        }
+    ],
+    "url": "https://app.alveo.edu.au/contrib/6",
+    "metadata": {
+        "title": "Austalk Manual Transcriptions",
+        "collection": "https://app.alveo.edu.au/catalog/austalk",
+        "creator": "Steve Cassidy",
+        "created": "2018-03-13T00:09:13Z",
+        "abstract": "\"Transcriptions of the re-told story and interview tasks for 92 speakers from the Austalk collection. These recordings were manually transcribed be a commercial provider. Transcriptions are roughly time-aligned with timestamps every so often in the text.  Transcripts are provided as word files and plain text.\""
+    }
+}

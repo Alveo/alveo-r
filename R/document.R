@@ -5,6 +5,7 @@
 ##' @field size The document size in bytes
 ##' @export Document
 ##' @exportClass Document
+##' @importFrom methods new
 Document <- setRefClass("Document",
 
 	fields = list(
