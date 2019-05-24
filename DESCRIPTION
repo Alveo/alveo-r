@@ -3,8 +3,12 @@ Type: Package
 Title: R interface to the Alveo API
 Version: 1.0.3
 Date: 2019-05-10
-Author: Steve Cassidy
-Maintainer: Steve Cassidy <Steve.Cassidy@mq.edu.au>
+Authors@R:
+    person(given = "Steve",
+           family = "Cassidy",
+           role = c("aut", "cre"),
+           email = "steve.cassidy@mq.edu.au",
+           comment = c(ORCID = "https://orcid.org/0000-0003-2357-9652"))
 Description: Provides an interface to interact with the API of the Alveo
     virtual laboratory (see http://alveo.edu.au).  Alveo stores language data
     as audio, video and text resources and provides an API for programmatic
